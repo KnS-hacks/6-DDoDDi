@@ -17,8 +17,7 @@ class User(models.Model):
 
 class Letterbox(models.Model):
     box_name = models.CharField(max_length=200, blank=True)
-    mentor = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
-    mentee = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
 
     def __str__(self):
         return self.box_name
@@ -26,7 +25,6 @@ class Letterbox(models.Model):
 
 class Letter(models.Model):
     sender = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
-    recipient = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
     letter_box = models.ForeignKey(Letterbox, on_delete=models.CASCADE, blank=True)
     title = models.CharField(max_length=200, blank=True)
     comment = models.TextField(max_length=1000, blank=True, null=True)
@@ -35,4 +33,3 @@ class Letter(models.Model):
 
     def __str__(self):
         return self.title
-s
