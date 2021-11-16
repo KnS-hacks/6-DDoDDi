@@ -6,6 +6,4 @@ class User(models.Model):
     password = models.CharField(max_length=100, blank=True)
     mbti = models.CharField(max_length=100, blank=True)
     number = models.CharField(max_length=100, blank=True)
-    check = odels.BooleanField(default=False)
-
-
+    check = models.BooleanField(default=False)
