@@ -22,5 +22,5 @@ class Mission(models.Model):
     mission_check = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.user_nickname
+        return self.title
 
