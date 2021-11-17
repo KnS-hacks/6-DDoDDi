@@ -1,0 +1,214 @@
+:root {
+    /* Color */
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --Brown-color: #a56a43;
+    --Brown-light-color: #df9e74;
+    --Brown-lighter-color: #fdd6ad;
+    --Brown-lightest-color: #ffe9d0;
+  
+    /* Size */
+  
+    --size-padding: 12px;
+    --avatar-size: 56px;
+  
+    /* Font Size */
+  
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+  
+    /* 사용법 
+      
+      ex) Color
+  
+      color: var(--Brown-color);
+  
+      ex) Padding
+  
+      padding: var(--padding);
+  
+    */
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .background {
+    background-color: #ffeecb;
+    max-width: 555px;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  #container {
+      overflow-y: auto;
+      height: 72%;
+  }
+  
+  .navbar {
+    background-color: var(--Brown-color);
+    height: 80px;
+    padding: 26px 20px 16px;
+  }
+  #ButtonSetting{
+      margin-top : 20px;
+      margin-left: 420px;
+  }
+  #questButton{
+      background-image: url("../images/questButton.png");
+      background-size: 60%;
+      background-repeat: no-repeat;
+      padding: 30px 40px 20px 40px;
+    }
+  
+  #questionBox{
+      margin:20px 20px 20px 20px;
+  }
+
+  #questionTitle{
+      background-color: var(--Brown-light-color);
+      padding-left: 15px;
+      margin-left: 30px;
+      margin-right: 30px;
+      border-radius: 10px 10px 0px 0px;
+      font-weight: bold;
+  }
+  #questionContent{
+      background-color: var(--Brown-lighter-color);
+      padding: 10px 15px 10px;
+      margin-left: 30px;
+      margin-right: 30px;
+      border-radius: 0px 0px 10px 10px;
+  }
+
+  #line{
+      margin-left: 32px;
+      margin-top : 16px;
+      width: 450px;
+      height: 1px;
+      background-color: var(--black-color);
+  }
+
+  #questionInfoBox{
+      border-radius: 10px 10px 10px 10px;
+      background-color: var(--Brown-color);
+      padding: 10px 10px 5px 10px;
+      margin-left : 10px;
+  }
+
+  #questionContent{
+      font-size: var(--font-small);
+      display: flex;
+      font-size: small;
+      font-weight: bold;
+  }
+
+  #comments{
+    margin:20px 20px 20px 20px;
+  }
+  .comment-date{
+    font-size : xx-small;
+  }
+  .comment-content{
+    font-size: large;
+  }
+  #new-comment{
+    width: 450px;
+  }
+
+  .comment-row{
+    background-color: var(--Brown-lighter-color);
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top : 6px;
+    margin-left: 20px;
+    margin-right: 30px;
+    border-radius: 5px 5px 5px 5px;
+    font-weight: bold;
+    font-size: small;
+  }
+
+  .comment-add{
+    background-color: var(--Brown-lighter-color);
+    padding :5px;
+    margin-top : 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px 5px 5px 5px;
+    font-weight: bold;
+    font-size: small;
+  }
+    
+  #boxSetting {
+    width: 100%;
+  }
+  
+  #boxSetting2 {
+    width: 100%;
+  }
+  
+  .footer {
+    bottom: 0;
+    height: 90px;
+    background-color: var(--Brown-color);
+  }
+  #navigation {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: space-around;
+    bottom: 0;
+    width: 555px;
+    height: 90px;
+    background-color: var(--Brown-color);
+  }
+  
+  #IconBox {
+    display: flex;
+    align-items: center;
+  }
+  #homeIcon {
+    background-image: url("../images/homeIcon.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 40px;
+    height: 40px;
+  }
+  #mentoIcon {
+    background-image: url("../images/mentoIcon.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 40px;
+    height: 40px;
+  }
+  #questionIcon {
+    background-image: url("../images/questionIcon.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 40px;
+    height: 40px;
+  }
+  #matchingIcon {
+    background-image: url("../images/matchingIcon.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 35px;
+    height: 35px;
+  }
+  
