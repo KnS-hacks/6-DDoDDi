@@ -1,0 +1,312 @@
+:root {
+  /* Color */
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --Brown-color: #a56a43;
+  --Brown-light-color: #df9e74;
+  --Brown-lighter-color: #fdd6ad;
+  --Brown-lightest-color: #ffe9d0;
+
+  /* Size */
+
+  --size-padding: 12px;
+  --avatar-size: 56px;
+
+  /* Font Size */
+
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+
+  /* 사용법 
+      
+      ex) Color
+      color: var(--Brown-color);
+      ex) Padding
+      padding: var(--padding);
+    */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
+
+.background {
+  background-color: #ffeecb;
+  max-width: 555px;
+  width: 100%;
+  height: 100vh;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+}
+
+#logo {
+  width: 40px;
+  height: 40px;
+  background-image: url("../images/logo.png");
+}
+
+.navbar {
+  background-color: var(--Brown-color);
+  height: 80px;
+  padding: 26px 20px 16px;
+}
+
+#profile {
+  display: flex;
+  margin: 30px;
+  align-items: center;
+}
+
+#profileImage {
+  margin-left: 5%;
+  margin-right: 4%;
+  background-image: url("../images/userProfileImage.png");
+  width: 75px;
+  height: 75px;
+}
+
+#profileInfo {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: var(--Brown-color);
+  font-size: 20px;
+  font-weight: 900;
+}
+
+#stampcheck {
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: 20px;
+  width: 60px;
+  height: 70px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url("../images/stampImg.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#boxSetting {
+  color: var(--Brown-color);
+  font-size: 20px;
+  font-weight: 900;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  width: 80%;
+  height: 65px;
+  margin: 2% 0% 5% 5%;
+  background-color: white;
+}
+
+#mentoBtn {
+  display: flex;
+
+  margin: 10px 30px 10px 30px;
+  justify-content: space-around;
+}
+
+#mentoBtn span {
+  color: var(--Brown-color);
+  font-style: normal;
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 24px;
+}
+
+#valanceGameBtn {
+  width: 230px;
+  height: 130px;
+  border: 5px solid #a56a43;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+#missionBtn {
+  width: 230px;
+  height: 130px;
+  border: 5px solid #a56a43;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+#stampbox {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+#mentobox {
+  border: 5px solid #a56a43;
+  box-sizing: border-box;
+  border-radius: 20px;
+  color: var(--Brown-color);
+  align-items: center;
+  font-size: 20px;
+  font-weight: 900;
+  display: flex;
+  flex-direction: row;
+  margin: 3% 0% 0% 1%;
+  padding: 10px;
+}
+
+#mentoprofileImage {
+  background-image: url("../images/userProfileImage.png");
+  width: 75px;
+  height: 75px;
+  margin-left: 5%;
+  margin-right: 8%;
+}
+
+#mission {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 20px 10px 20px;
+  height: 55%;
+  border-radius: 20px;
+  background-color: var(--white-color);
+  border: 5px solid #a56a43;
+}
+
+#nextArrow {
+  background-image: url("../images/arrow-right.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 30px;
+  height: 30px;
+
+  margin-left: auto;
+  margin-right: 30px;
+  margin-top: 7px;
+}
+
+#nextArrow-white {
+  background-image: url("../images/arrow-right-white.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 30px;
+  height: 30px;
+
+  margin-left: auto;
+  margin-right: 10px;
+  margin-top: 7px;
+}
+
+#mentiInfo {
+  color: var(--Brown-color);
+  font-size: 20px;
+  font-weight: 900;
+  margin: 2% 0% 2% 5%;
+}
+
+#mentiScrollBox {
+  /* */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow-y: hidden;
+  border-radius: 20px;
+  width: 500px;
+  height: 100%;
+  background-color: white;
+}
+
+#mentiScrollBox::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+#mentiBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 10px;
+  margin-left: 20px;
+  border-radius: 20px;
+  width: 430px;
+  height: 70px;
+  background-color: #a56a43;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+
+#mentiName {
+  font-size: 23px;
+  font-weight: 700;
+}
+
+#missionMento {
+  font-size: 14px;
+  margin-top: 25px;
+  margin-left: auto;
+}
+
+#navigation {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  justify-content: space-around;
+  bottom: 0;
+  width: 555px;
+  height: 90px;
+  background-color: var(--Brown-color);
+}
+
+#IconBox {
+  display: flex;
+  align-items: center;
+}
+#homeIcon {
+  background-image: url("../images/homeIcon.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 40px;
+  height: 40px;
+}
+#mentoIcon {
+  background-image: url("../images/mentoIcon.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 40px;
+  height: 40px;
+}
+#questionIcon {
+  background-image: url("../images/questionIcon.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 40px;
+  height: 40px;
+}
+#matchingIcon {
+  background-image: url("../images/matchingIcon.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 35px;
+  height: 35px;
+}
