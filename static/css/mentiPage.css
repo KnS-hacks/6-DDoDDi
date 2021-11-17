@@ -162,7 +162,7 @@ button {
   margin-left: 10px;
 }
 
-#mentibox {
+#mentobox {
   border: 5px solid #a56a43;
   box-sizing: border-box;
   border-radius: 20px;
@@ -176,7 +176,7 @@ button {
   padding: 10px;
 }
 
-#mentiprofileImage {
+#mentoprofileImage {
   background-image: url("../images/userProfileImage.png");
   width: 75px;
   height: 75px;
