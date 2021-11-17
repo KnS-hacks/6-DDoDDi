@@ -1,8 +1,9 @@
 from django.contrib import admin
 from django.urls import path, include
-from .views import *
+from . import views
 
 app_name = 'users'
 urlpatterns = [
-    
+    path('', views.home, name='home'),
+    path('mypage/', views.mypage, name='mypage'),
 ]
