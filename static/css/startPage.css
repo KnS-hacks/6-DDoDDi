@@ -49,11 +49,13 @@ body {
 }
 
 .background {
+  border-radius: 5%;
   background-color: #ffeecb;
   max-width: 555px;
   width: 100%;
   height: 100vh;
 }
+
 
 #container {
   display: flex;

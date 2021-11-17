@@ -49,6 +49,7 @@
   }
   
   .background {
+    border-radius: 5%;
     background-color: #ffeecb;
     max-width: 555px;
     width: 100%;
@@ -61,6 +62,7 @@
   }
   
   .navbar {
+    border-radius:10px 10px 0px 0px;
     background-color: var(--Brown-color);
     height: 80px;
     padding: 26px 20px 16px;
@@ -172,6 +174,7 @@
     background-color: var(--Brown-color);
   }
   #navigation {
+    border-radius: 0px 0px 10px 10px;
     display: flex;
     flex-direction: row;
     position: absolute;

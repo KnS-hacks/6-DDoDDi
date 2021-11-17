@@ -49,6 +49,7 @@
   }
   
   .background {
+    border-radius: 5%;
     background-color: #ffeecb;
     max-width: 555px;
     width: 100%;
@@ -61,6 +62,7 @@
   }
   
   .navbar {
+    border-radius:10px 10px 0px 0px;
     background-color: var(--Brown-color);
     height: 80px;
     padding: 26px 20px 16px;
@@ -126,9 +128,48 @@
     width: 100%;
   }
   
-  .footer {
+  #navigation {
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: space-around;
     bottom: 0;
+    width: 555px;
     height: 90px;
     background-color: var(--Brown-color);
+  }
+  
+  #IconBox {
+    display: flex;
+    align-items: center;
+  }
+  #homeIcon {
+    background-image: url("../images/homeIcon.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 40px;
+    height: 40px;
+  }
+  #mentoIcon {
+    background-image: url("../images/mentoIcon.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 40px;
+    height: 40px;
+  }
+  #questionIcon {
+    background-image: url("../images/questionIcon.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 40px;
+    height: 40px;
+  }
+  #matchingIcon {
+    background-image: url("../images/matchingIcon.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 35px;
+    height: 35px;
   }
   
