@@ -70,6 +70,7 @@ button {
 }
 
 .navbar {
+  border-radius:10px 10px 0px 0px;
   display: flex;
   flex-direction: row;
   background-color: var(--Brown-color);
@@ -146,6 +147,7 @@ button {
 }
 
 #navigation {
+  border-radius: 0px 0px 10px 10px;
   display: flex;
   flex-direction: row;
   position: absolute;
