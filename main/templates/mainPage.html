@@ -5,13 +5,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="{% static '../../static/css/mainPage.css' %}" />
     <title>main</title>
   </head>
   <body>
     <div class="background">
         <div class="navbar">
-            navbar
+           <div id="logo"></div>
         </div>
         <div id="container" role="main">
             <div id= "profile">
@@ -19,7 +19,7 @@
                 </div>
                 <div id="profileInfo" class = "profileSetting">
                     <div id="userName">
-                        윤영준
+                        김승환
                     </div>
                     <div id="userSchool">
                         한국기술교육대학교
@@ -36,20 +36,24 @@
                 <div id="boxSetting">
                     <div id = "stampTitle">
                         <div id = "스탬프">스탬프</div>
-                        <div id = "stampImg"></div>
                     </div>
-                    <div id = "보유한스탬프는">보유 스탬프는</div>
-                    <div id = "stampCount">99</div>
-                    <div id = "개">개</div>
+                    <div id="stampbox">
+                        <div id = "stampImg"></div>
+                        <div id = "보유한스탬프는">보유 스탬프는</div>
+                        <div id = "stampCount">99</div>
+                        <div id = "개">개</div>
+                    </div>
                 </div>
             </div>
             <div id = "mentoInfo">
-                <div id="boxSetting">
-                    <div id = "Title">
-                        <div id = "멘토정보">멘토정보</div>
+                <div id = "멘토정보">멘토정보</div>
+                <div id="mentobox">
+                    
                         <div id = "mentoprofileImage"></div>
-                    </div>
+                  
+                    
                     <div id = "mentoprofileInfo" >
+                        
                         <div id = "userName">
                             윤영준
                         </div>
@@ -70,28 +74,50 @@
                     </div>
                     <div id = "missionBox">
                         <div id = "missonName">
-
+                            1관 향설 편의점 다녀오기
                         </div>
                         <div id = "missionMento">
-
+                            멘토이름
                         </div>
-                        <div id = "nextArrow"></div>
-                    </div><div id = "missionBox">
+                        <div id = "nextArrow-white"></div>
+                    </div>
+                    <div id = "missionBox">
                         <div id = "missonName">
-
+                            다같이 곱창먹으러 가기
                         </div>
                         <div id = "missionMento">
-
+                            멘토이름
                         </div>
-                        <div id = "nextArrow"></div>
+                        <div id = "nextArrow-white"></div>
+                    </div>
+                    <div id = "missionBox">
+                        <div id = "missonName">
+                            이것은 테스트용 입니다
+                        </div>
+                        <div id = "missionMento">
+                            멘토이름
+                        </div>
+                        <div id = "nextArrow-white"></div>
                     </div>
                 </div>
             </div>
 
         </div>
-        <div class="footer">
-            footer
-        </div>
+            <div id ="navigation" role="bar">
+                <div id="IconBox">
+                <a herf ="mainPage.html"><div id= "homeIcon" class ="IconBox"></div></a>
+                </div>
+                <div id="IconBox">
+                <a herf ="mentoPage.html"><div id= "mentoIcon" class ="IconBox"></div></a>
+                </div>
+                <div id="IconBox">
+                <a herf ="questionPage.html"><div id= "questionIcon" class ="IconBox"></div></a>
+                </div>
+                <div id="IconBox">
+                <a herf ="matchingPage.html"><div id= "matchingIcon" class ="IconBox"></div></a>
+                </div>
+            </div>
+        
       </div>
     </div>
   </body>
