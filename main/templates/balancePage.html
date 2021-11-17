@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static '../../static/css/balancePage.css' %}" />
+    <title>main</title>
+  </head>
+  <body>
+    <div class="background">
+        <div class="navbar">
+           <div id="logo"></div>
+           <div id="title">밸런스게임</div>
+        </div>
+        <div id="container" style="overflow:scroll;">
+            
+            
+            <div id = "balance">
+                <button id="leftItem"  onclick="location.href='balance.html' ">
+                    <span>짜장</span>
+                </button>
+                <button id = "rightItem" onclick="location.href='멘티니까 미션지항목으로' ">
+                    <span>짬뽕</span>
+                </button>
+            </div>
+            <div id = "balance">
+              <button id="leftItem"  onclick="location.href='balance.html' ">
+                  <span>민초</span>
+              </button>
+              <button id = "rightItem" onclick="location.href='멘티니까 미션지항목으로' ">
+                  <span>반민초</span>
+              </button>
+            </div>
+            <div id = "balance">
+              <button id="leftItem"  onclick="location.href='balance.html' ">
+                  <span>애인</span>
+              </button>
+              <button id = "rightItem" onclick="location.href='멘티니까 미션지항목으로' ">
+                  <span>친구</span>
+              </button>
+            </div>
+            <div id = "balance">
+              <button id="leftItem"  onclick="location.href='balance.html' ">
+                  <span>돈</span>
+              </button>
+              <button id = "rightItem" onclick="location.href='멘티니까 미션지항목으로' ">
+                  <span>명예</span>
+              </button>
+            </div>
+            <div id="submit">
+            <button id="submitBtn" onclick="">제출하기</button>
+            </div>
+        
+            </div>
+          </div>
+        </div>
+            <div id ="navigation" role="bar">
+                <div id="IconBox">
+                <a herf ="mainPage.html"><div id= "homeIcon" class ="IconBox"></div></a>
+                </div>
+                <div id="IconBox">
+                <a herf ="mentoPage.html"><div id= "mentoIcon" class ="IconBox"></div></a>
+                </div>
+                <div id="IconBox">
+                <a herf ="questionPage.html"><div id= "questionIcon" class ="IconBox"></div></a>
+                </div>
+                <div id="IconBox">
+                <a herf ="matchingPage.html"><div id= "matchingIcon" class ="IconBox"></div></a>
+                </div>
+            </div>
+        
+      </div>
+    </div>
+  </body>
+</html>
+
+
