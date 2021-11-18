@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static '../../static/css/missionList.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/missionList.css' %}" />
     <title>missionList</title>
   <body>
     <div class="background">
@@ -13,35 +13,32 @@
             navbar
         </div> 
         <div id="container" role="main" >
+            {% if messages %}
+            <ul class="messages">
+            {% for message in messages %}
+            <script type="text/javascript">
+                alert('{{message}}');
+            </script>
+            {% endfor %}
+            </ul>
+            {% endif %}
+            {% for m in missions %}
             <div id = "missionBox">
                 <div id = "missionmentoProfile">
                 </div>
                 <div id = "missionInfoBox">
                     <div id = "missionName">
-                        친구랑 학식먹은거 인증하기
+                        {{m.title}}
                     </div>
                     <div id = "missionContent">
-                        친한 친구랑 학식먹고 인증하면 미션완료!
+                        {{m.question}}
                         <div id ="mentoName">
-                            윤영준
+                            {{m.user_nickname}}
+                            <!-- <div>{{m.userPair}}</div> -->
                         </div>
-                        {% if messages %}
-                        <ul class="messages">
-                        {% for message in messages %}
-                        <script type="text/javascript">
-                            alert('{{message}}');
-                        </script>
-                        {% endfor %}
-                        </ul>
-                        {% endif %}
-                        {% for m in missions %}
-                        <!-- <div>{{m.user_nickname}}</div> -->
-                        <div>{{m.userPair}}</div>
-                        <div>{{m.title}}</div>
                         {% if m.mission_check %}
-                        <div>미션완료!</div>
+                        미션완료!
                         {% else %}
-                        <div>{{m.question}}</div>
                         <div id ="mission">
                             <form method="POST" action="{% url 'mission:mission_list' %}">
                             {% csrf_token %}
@@ -54,10 +51,10 @@
                             </form>
                         </div>
                         {% endif %}
-                        {% endfor %}
                     </div>
                 </div>
-            </div>                       
+            </div>   
+            {% endfor %}                    
         </div>
     </div>
     <div id ="navigation" role="bar">

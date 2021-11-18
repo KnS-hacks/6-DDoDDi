@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static '../../static/css/missionPage.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/missionPaper.css' %}"/>
     <title>missionPaper</title>
   <body>
     <div class="background">
@@ -14,31 +14,28 @@
         </div>
         <div id="container" role="main" >
             <div id = "missionBox">
+                <form method="post" action="{% url 'mission:add_mission' %}">
+                {% csrf_token %}
                 <div id="titleBox">
                     <div id = "missionTitle">
                    {{user}} 멘토가 {{pair}} 멘티에게 줄 이번 미션은?
                     </div>
-  
-                    <!--<div><button id="randomDice"></button></div>-->
+                    <div><button id="randomDice" type="reset"></button></div>
 
                 </div>
 
                 <div id = "missionContent">
                     <div id ="mission">
-                      <form method="POST" action="{% url 'mission:add_mission' %}">
-                      {% csrf_token %}
-                        <table>
-                          {{form.as_table}}
-                        </table>
-                        <br>
-                        <div id = "submitButtonBox">
-                          <button id = "submitButton" type="submit">등록하기</button>
-                        </div>
-                      </form>
+                      {{form.title}}
+                      {{form.question}}
+                      {{form.answer}}
                     </div>
                 </div>
 
-
+                <div id = "submitButtonBox">
+                    <button id = "submitButton" type="submit">등록하기</button>
+                </div>
+              </form>
             </div>
                                
         </div>
