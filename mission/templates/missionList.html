@@ -25,11 +25,35 @@
                         <div id ="mentoName">
                             윤영준
                         </div>
+                        {% if messages %}
+                        <ul class="messages">
+                        {% for message in messages %}
+                        <script type="text/javascript">
+                            alert('{{message}}');
+                        </script>
+                        {% endfor %}
+                        </ul>
+                        {% endif %}
                         {% for m in missions %}
-                        <div>{{m.user_nickname}}</div>
-                        <div>{{m.user_pair}}</div>
+                        <!-- <div>{{m.user_nickname}}</div> -->
+                        <div>{{m.userPair}}</div>
                         <div>{{m.title}}</div>
+                        {% if m.mission_check %}
+                        <div>미션완료!</div>
+                        {% else %}
                         <div>{{m.question}}</div>
+                        <div id ="mission">
+                            <form method="POST" action="{% url 'mission:mission_list' %}">
+                            {% csrf_token %}
+                              <input type="text" name="answer" id="answer">
+                              <input type="hidden" name="mNumber" value="{{m.id}}">
+                              <br>
+                              <div id = "submitButtonBox">
+                                <button id = "submitButton" type="submit">제출하기</button>
+                              </div>
+                            </form>
+                        </div>
+                        {% endif %}
                         {% endfor %}
                     </div>
                 </div>
