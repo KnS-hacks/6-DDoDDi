@@ -4,7 +4,7 @@ from users.models import *
 # Create your models here.
 
 class Board(models.Model):
-    user_nickname = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, related_name="user_nickname")
+    author = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
     title = models.CharField(max_length=100, blank=True)
     content = models.TextField()
     created_date = models.DateField(auto_now_add=True)
@@ -15,7 +15,7 @@ class Board(models.Model):
 
 class Comment(models.Model):
     id = models.AutoField(primary_key=True)
-    user_nickname = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, related_name="user_nickname")
+    uauthor= models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
     cotent = models.TextField()
     created_date = models.DateField(auto_now_add=True)
     modified_date = models.DateField(auto_now=True)
