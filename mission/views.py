@@ -1,31 +1,30 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
 from mission.models import *
 from users.models import *
 from .forms import *
 
-# mList_view(): 멘티 미션 목록 뷰
 def mList_view(request):
-    user = User.objects.first()
-    missions = Mission.objects.filter(user_nickname=user)
-    print(missions)
-
-    return render(request, 'missionList.html', {'missions':missions})
-
-# perform_mission_view(): 멘티 미션 수행 뷰
-def perform_mission_view(request):
     user = User.objects.get(id=2)
-    missions = Mission.objects.filter(userPair=user.id)
-
+    missions = Mission.objects.filter(userPair=user)
+    context = {
+        'missions':missions
+    }
     if request.method == 'POST':
         new_answer = request.POST['answer']
+        mNumber = request.POST['mNumber']
         for mission in missions:
-            if (mission.answer == new_answer):
-                return redirect('mission:mission_list')
+            if ((int)(mission.id) == (int)(mNumber)):
+                if (mission.answer == new_answer):
+                    messages.add_message(request, messages.INFO, '미션 완료!')
+                    mission.mission_check = True
+                    mission.save()
+                    return redirect('mission:mission_list')
+                else:
+                    messages.add_message(request, messages.ERROR, '다시 입력해주세요!')
+                    return render(request, 'missionList.html', context)
     else:
         # missions의 answer 안보이게 처리는 템플릿에서 
-        context = {
-            'missions':missions
-        }
         return render(request, 'missionList.html', context)
 
 # add_mission_view(): 멘토 미션 추가 뷰
