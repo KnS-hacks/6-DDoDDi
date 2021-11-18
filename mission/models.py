@@ -14,6 +14,7 @@ from users.models import User
 # mission_check : 미션 여부
 
 class Mission(models.Model):
+    id = models.AutoField(primary_key=True)
     user_nickname = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, related_name="user_nickname")  
     user_pair = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, related_name="user_pair")
     title = models.CharField(max_length=100, blank=True)
