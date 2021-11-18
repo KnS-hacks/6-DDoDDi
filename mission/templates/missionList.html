@@ -13,7 +13,7 @@
             navbar
         </div> 
         <div id="container" role="main" >
-            {% if messages %}
+            <!-- {% if messages %}
             <ul class="messages">
             {% for message in messages %}
             <script type="text/javascript">
@@ -21,7 +21,7 @@
             </script>
             {% endfor %}
             </ul>
-            {% endif %}
+            {% endif %} -->
             {% for m in missions %}
             <div id = "missionBox">
                 <div id = "missionmentoProfile">
@@ -39,7 +39,7 @@
                         {% if m.mission_check %}
                         미션완료!
                         {% else %}
-                        <div id ="mission">
+                        <!-- <div id ="mission">
                             <form method="POST" action="{% url 'mission:mission_list' %}">
                             {% csrf_token %}
                               <input type="text" name="answer" id="answer">
@@ -49,7 +49,7 @@
                                 <button id = "submitButton" type="submit">제출하기</button>
                               </div>
                             </form>
-                        </div>
+                        </div> -->
                         {% endif %}
                     </div>
                 </div>
