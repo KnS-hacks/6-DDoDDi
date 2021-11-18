@@ -1,8 +1,4 @@
 from django.db import models
-
-# Create your models here.
-
-from django.db import models
 from users.models import User
 
 # < Mission >
@@ -16,7 +12,7 @@ from users.models import User
 class Mission(models.Model):
     id = models.AutoField(primary_key=True)
     user_nickname = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, related_name="user_nickname")  
-    user_pair = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, related_name="user_pair")
+    userPair = models.CharField(max_length=100, blank=True)
     title = models.CharField(max_length=100, blank=True)
     question = models.TextField()
     answer = models.CharField(max_length=100, blank=True)

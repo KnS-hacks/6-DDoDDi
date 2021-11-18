@@ -25,6 +25,12 @@
                         <div id ="mentoName">
                             윤영준
                         </div>
+                        {% for m in missions %}
+                        <div>{{m.user_nickname}}</div>
+                        <div>{{m.user_pair}}</div>
+                        <div>{{m.title}}</div>
+                        <div>{{m.question}}</div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>                       
