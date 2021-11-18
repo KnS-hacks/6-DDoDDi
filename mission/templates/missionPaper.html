@@ -16,21 +16,29 @@
             <div id = "missionBox">
                 <div id="titleBox">
                     <div id = "missionTitle">
-                   {{A}}멘토가 {{B}}멘티에게 줄 이번 미션은?
+                   {{user}}멘토가 {{pair}}멘티에게 줄 이번 미션은?
                     </div>
-                    <div><button id="randomDice"></button></div>
+  
+                    <!--<div><button id="randomDice"></button></div>-->
 
                 </div>
 
                 <div id = "missionContent">
                     <div id ="mission">
-                        
+                      <form method="POST" action="{% url 'mission:add_mission' %}">
+                      {% csrf_token %}
+                        <table>
+                          {{form.as_table}}
+                        </table>
+                        <br>
+                        <div id = "submitButtonBox">
+                          <button id = "submitButton" type="submit">등록하기</button>
+                        </div>
+                      </form>
                     </div>
                 </div>
 
-                <div id = "submitButtonBox">
-                    <button id = "submitButton" type="submit">등록하기</button>
-                </div>
+
             </div>
                                
         </div>
