@@ -25,11 +25,11 @@ class Letterbox(models.Model):
 
 class Letter(models.Model):
     recipient = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
+    # sender = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
     # letter_box = models.ForeignKey(Letterbox, on_delete=models.CASCADE, blank=True)
     title = models.CharField(max_length=200, blank=True)
     comment = models.TextField(max_length=1000, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=False, blank=True, null=True)
-    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.title
