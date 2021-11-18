@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static '../../static/css/missionPage.css' %}"/>
+    <title>missionPaper</title>
+  <body>
+    <div class="background">
+        <div class="navbar">
+            navbar
+        </div>
+        <div id="container" role="main" >
+            <div id = "missionBox">
+                <div id="titleBox">
+                    <div id = "missionTitle">
+                   {{A}}멘토가 {{B}}멘티에게 줄 이번 미션은?
+                    </div>
+                    <div><button id="randomDice"></button></div>
+
+                </div>
+
+                <div id = "missionContent">
+                    <div id ="mission">
+                        
+                    </div>
+                </div>
+
+                <div id = "submitButtonBox">
+                    <button id = "submitButton" type="submit">등록하기</button>
+                </div>
+            </div>
+                               
+        </div>
+        <div id ="navigation" role="bar">
+            <div id="IconBox">
+            <a herf ="mainPage.html"><div id= "homeIcon" class ="IconBox" onclick="location.href='#'"></div></a>
+            </div>
+            <div id="IconBox">
+            <a herf ="mentoPage.html"><div id= "mentoIcon" class ="IconBox" onclick="location.href='#'"></div></a>
+            </div>
+            <div id="IconBox">
+            <a herf ="questionPage.html"><div id= "questionIcon" class ="IconBox" onclick="location.href='#'"></div></a>
+            </div>
+            <div id="IconBox">
+            <a herf ="matchingPage.html"><div id= "matchingIcon" class ="IconBox" onclick="location.href='#'"></div></a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

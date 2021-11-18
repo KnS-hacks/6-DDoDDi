@@ -20,19 +20,19 @@
   --font-micro: 10px;
 
   /* 사용법 
-    
-    ex) Color
-    color: var(--Brown-color);
-    ex) Padding
-    padding: var(--padding);
-  */
+      
+      ex) Color
+      color: var(--Brown-color);
+      ex) Padding
+      padding: var(--padding);
+    */
 }
 
 * {
-  
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: Roboto;
 }
 
 ul {
@@ -40,14 +40,18 @@ ul {
 }
 
 body {
-  
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.background {
+button {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
 
+.background {
   border-radius: 5%;
   background-color: #ffeecb;
   max-width: 555px;
@@ -97,14 +101,15 @@ body {
   font-weight: 900;
 }
 
-#messageStored {
+#stampcheck {
   margin-top: 2%;
-  width: 46px;
-  height: 40px;
   margin-left: auto;
   margin-right: 20px;
-
-  background-image: url("../images/message.png");
+  width: 60px;
+  height: 70px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url("../images/stampImg.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -122,70 +127,56 @@ body {
   background-color: white;
 }
 
-#stamp {
+#mentoBtn {
   display: flex;
+
   margin: 10px 30px 10px 30px;
-  border-radius: 20px;
-  height: 130px;
-  background-color: var(--white-color);
+  justify-content: space-around;
 }
 
+#mentoBtn span {
+  color: var(--Brown-color);
+  font-style: normal;
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 24px;
+}
+
+#valanceGameBtn {
+  width: 230px;
+  height: 130px;
+  border: 5px solid #a56a43;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+#missionBtn {
+  width: 230px;
+  height: 130px;
+  border: 5px solid #a56a43;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
 #stampbox {
   display: flex;
   align-items: center;
   margin-left: 10px;
 }
 
-#stampImg {
-  background-image: url("../images/stampImg.png");
-  background-repeat: no-repeat;
-  width: 70px;
-  height: 80px;
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-
-#보유한스탬프는 {
-  margin-left: 50px;
-  margin-right: 35px;
-  margin-top: 20px;
-  font-weight: bold;
-}
-#stampCount {
-  font-weight: bold;
-  font-size: 70px;
-  color: var(--Brown-light-color);
-}
-
-#개 {
-  margin-left: 5px;
-  margin-top: 20px;
-  font-weight: bold;
-}
-#mentoInfo {
-  display: flex;
-
-  flex-direction: column;
-  margin: 10px 30px 10px 30px;
-  height: 130px;
-  border-radius: 20px;
-  background-color: var(--white-color);
-}
-
-#멘토정보 {
-  color: var(--Brown-color);
-  font-size: 20px;
-  font-weight: 900;
-  margin: 2% 0% 0% 5%;
-}
-
 #mentobox {
+  border: 5px solid #a56a43;
+  box-sizing: border-box;
+  border-radius: 20px;
   color: var(--Brown-color);
+  align-items: center;
   font-size: 20px;
   font-weight: 900;
   display: flex;
   flex-direction: row;
-  margin: 1% 0% 0% 5%;
+  margin: 3% 0% 0% 1%;
+  padding: 10px;
 }
 
 #mentoprofileImage {
@@ -196,13 +187,14 @@ body {
   margin-right: 8%;
 }
 
-#mission {
+#listInfo {
   display: flex;
   flex-direction: column;
-  margin: 10px 20px 10px 30px;
-  height: 350px;
+  margin: 10px 20px 10px 20px;
+  height: 55%;
   border-radius: 20px;
   background-color: var(--white-color);
+  border: 5px solid #a56a43;
 }
 
 #nextArrow {
@@ -217,56 +209,26 @@ body {
   margin-top: 7px;
 }
 
-#nextArrow-white {
-  background-image: url("../images/arrow-right-white.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 30px;
-  height: 30px;
-
-  margin-left: auto;
-  margin-right: 10px;
-  margin-top: 7px;
-}
-
-#미션정보 {
+#listTitle {
   color: var(--Brown-color);
   font-size: 20px;
   font-weight: 900;
-  margin: 2% 0% 0% 5%;
+  margin: 2% 0% 2% 5%;
 }
 
-#boxSetting2 {
+#mentiScrollBox {
+  /* */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  overflow-y: hidden;
   border-radius: 20px;
-  width: 490px;
-  height: 340px;
+  width: 500px;
+  height: 100%;
   background-color: white;
 }
-#missionBox {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: 10px;
-  margin-left: 20px;
-  border-radius: 20px;
-  width: 430px;
-  height: 70px;
-  background-color: #a56a43;
-  padding: 10px;
-  font-size: 18px;
-  font-weight: 500;
-  color: white;
-}
 
-#missonName {
-  font-size: 23px;
-  font-weight: 700;
-}
-
-#missionMento {
-  font-size: 14px;
-  margin-top: 25px;
-  margin-left: auto;
+#mentiScrollBox::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
 }
 
 #navigation {
@@ -313,3 +275,4 @@ body {
   width: 35px;
   height: 35px;
 }
+
