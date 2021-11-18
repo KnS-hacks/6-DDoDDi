@@ -1,0 +1,12 @@
+
+
+<h1>letter-create</h1>
+
+    <form enctype="multipart/form-data" action="{% url 'users:letter-create' %}" method="post">
+        {% csrf_token %}
+        <div>
+            {{ form.as_p }}
+        </div>
+        <button type="submit">편지 보내기</button>
+    </form>
+</div>
