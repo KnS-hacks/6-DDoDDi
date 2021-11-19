@@ -15,18 +15,31 @@
         </div>
         <div id="container" role="main" >
             {% for item in letters %}
-            <div id = "messageBox">
-                <div id = "messageProfile">
-                </div>
+            <form action = "{% url 'users:letter-detail' item.id %}" method="post">
+                {% csrf_token %}
+                <button id = "messageBox">
+                {% if item.recipient.id == 1 %}
+                <img src="{{ item.recipient.profile.url }}" , alt="", style="width: 50px; height: 50px; border-radius: 50px">
+                {% endif %}
+                {% if item.recipient.id == 2 %}
+                <img src="{{ item.recipient.profile.url }}" , alt="", style="width: 50px; height: 50px; border-radius: 50px">
+                {% endif %}
                 <div id = "messageInfoBox">
                     <div id = "messageTitle">
-                        {{item.title}}
+                        {% if item.recipient.id == 1 %}
+                        보낸 편지: {{item.title}}
+                        {% endif %}
+                        {% if item.recipient.id == 2 %}
+                        받은 편지 : {{item.title}}
+                        {% endif %}
+
                     </div>
                     <div id = "messageContent">
                         {{item.comment}}
                     </div>
                 </div>
-            </div>
+                </button>
+            </form>
             {% endfor %}
         </div>
       </div>

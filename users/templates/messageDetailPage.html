@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static '../../static/css/messageDetailPage.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/messageDetailPage.css' %}"/>
 
     <title>messageDetail</title>
   <body>
@@ -14,19 +14,17 @@
             navbar
         </div>
         <div id="container" role="main" >
-            <form>
                 <div id = "messageBox">
                     <div id = "messageTitle">
-                        <div id = "titleBox"><span id="title">(제목)</span></div>
+                        <div id = "titleBox"><span id="title">{{letter.title}}</span></div>
                         <button id = "deleteButton">삭제</button>
                         <button id = "backButton">뒤로</button>
                     </div>
                     <div id = "messageContent">
-                        <div id = "contentBox"><span id="text">(내용)</span></div>
+                        <div id = "contentBox"><span id="text">{{letter.comment}}</span></div>
                     </div>
                     <div id = "line"></div>
                 </div>
-            </form>                               
         </div>
             <div id ="navigation" role="bar">
                 <div id="IconBox">
