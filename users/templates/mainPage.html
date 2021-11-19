@@ -48,18 +48,13 @@
                     <div id="stampbox">
                         <div id = "stampImg"></div>
                         <div id = "보유한스탬프는">보유 스탬프는</div>
-                        {% if user.matching_check == False %}
-                        <div id = "stampCount">?</div>
+                        <div id = "stampCount">99</div>
                         <div id = "개">개</div>
-                        {% endif %}
-                        {% if user.matching_check == True %}
-                        <div id = "stampCount">{{user.stamp}}</div>
-                        <div id = "개">개</div>
-                        {% endif %}
                     </div>
                 </div>
             </div>
             <div id = "mentoInfo">
+                  
                     {% if user.matching_check == False %}
                     <form action="{% url 'users:matching' %}" method="post">
                         {% csrf_token %}
@@ -87,41 +82,37 @@
                         </div>
                     </div>
                     {% endif %}
-                        <a href="{% url 'users:mentor-detail' %}"><div id = "nextArrow" style="margin-left: 50px;"></div></a>
+                    <div id = "nextArrow"></div>
                 </div>
             </div>
             <div id = "mission" >
-                <div id="boxSetting2" style="overflow:scroll;">
+                <div id="boxSetting2" >
                     <div id = "미션정보">
                         미션 정보
                     </div>
-                    {% for m in missions %}
-                    <div id = "missionBox">
-                        <div id = "missonName">
-                            {{m.title}}
+                    
+                    <div id = "balanceGo">
+                        <div id = "balanceGoName">
+                            밸런스게임 하러가기
                         </div>
-                        <div id = "missionMento">
-                            {{m.userPair}}
-                        </div>
-                        <div id = "nextArrow-white"></div>
                     </div>
-                    {% endfor %}
                 </div>
             </div>
 
         </div>
             <div id ="navigation" role="bar">
                 <div id="IconBox">
+
                 <a href ="{% url 'users:mypage' %}"><div id= "homeIcon" class ="IconBox"></div></a>
                 </div>
                 <div id="IconBox">
                 <a href ="{% url 'users:mentor-detail' %}"><div id= "mentoIcon" class ="IconBox" ></div></a>
                 </div>
                 <div id="IconBox">
-                <a href ="{% url 'mission:mission_list' %}"><div id= "questionIcon" class ="IconBox"></div></a>
+                <a herf ="questionPage.html"><div id= "questionIcon" class ="IconBox" onclick="location.href='#'"></div></a>
                 </div>
                 <div id="IconBox">
-                <a href ="{% url 'board:question' %}"><div id= "matchingIcon" class ="IconBox"></div></a>
+                <a herf ="matchingPage.html"><div id= "matchingIcon" class ="IconBox" onclick="location.href='#'"></div></a>
                 </div>
             </div>
         
