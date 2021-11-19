@@ -5,8 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'css/questionDetail.css' %}"/>
-    <script src="../templates/Comment.js" tpye="text/javascript"></script>
+    <link rel="stylesheet" href="{% static '../../static/css/questionDetail.css' %}"/>
     <title>questionDetail</title>
   <body>
     <div class="background">
@@ -16,49 +15,40 @@
         <div id="container" role="main" >
             <div id = "questionBox">
                 <div id = "questionTitle">
-                    {{board.title}}
+                    제목
                 </div>
                 <div id = "questionContent">
-                    {{board.content}}
+                    내용
                 </div>
                 <div id = "line"></div>
             </div>
-
+            
+            <form>
             <div id = "comments">
-                {% if comments %}
-                {% for c in comments %}
                 <div id = "comment-head">
-                    {{c.content}}
                 </div>
-                {% endfor %}
-                {% endif %}
-            </div>    
-
-            <form method="POST" action="{% url 'board:question_detail' %}">
-                {% csrf_token %}
-            <div class ="comment-add">
-                <!-- {{form}} -->
-                <textarea id = "new-comment" name="new-comment" row=5 placeholder="새 댓글"></textarea>
-                <button id = "submitButton" type="submit" onclick="submitComment()">등록하기</button>
             </div>
-            </form>
-    
-                               
+            </form>  
+                             
         </div>
-        <div id ="navigation" role="bar">
-            <div id="IconBox">
-            <a herf ="mainPage.html"><div id= "homeIcon" class ="IconBox" onclick="location.href='#'"></div></a>
-            </div>
-            <div id="IconBox">
-            <a herf ="mentoPage.html"><div id= "mentoIcon" class ="IconBox" onclick="location.href='#'"></div></a>
-            </div>
-            <div id="IconBox">
-            <a herf ="questionPage.html"><div id= "questionIcon" class ="IconBox" onclick="location.href='#'"></div></a>
-            </div>
-            <div id="IconBox">
-            <a herf ="matchingPage.html"><div id= "matchingIcon" class ="IconBox" onclick="location.href='#'"></div></a>
-            </div>
+        <div class ="comment-add">
+            <textarea id = "new-comment" name="new-comment" row=15 placeholder="새 댓글" style="resize: none;"></textarea>
+            <button id = "submitButton" type="submit" onclick="submitComment()">등록하기</button>
         </div>
+            <div id ="navigation" role="bar">
+                <div id="IconBox">
+                <a herf ="mainPage.html"><div id= "homeIcon" class ="IconBox"></div></a>
+                </div>
+                <div id="IconBox">
+                <a herf ="mentoPage.html"><div id= "mentoIcon" class ="IconBox"></div></a>
+                </div>
+                <div id="IconBox">
+                <a herf ="questionPage.html"><div id= "questionIcon" class ="IconBox"></div></a>
+                </div>
+                <div id="IconBox">
+                <a herf ="matchingPage.html"><div id= "matchingIcon" class ="IconBox"></div></a>
+                </div>
+            </div>
       </div>
     </div>
   </body>
