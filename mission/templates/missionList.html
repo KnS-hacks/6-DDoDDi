@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'css/missionList.css' %}" />
+    <link rel="stylesheet" href="{% static '../../static/css/missionList.css' %}" />
     <title>missionList</title>
   <body>
     <div class="background">
@@ -13,62 +13,41 @@
             navbar
         </div> 
         <div id="container" role="main" >
-            <!-- {% if messages %}
-            <ul class="messages">
-            {% for message in messages %}
-            <script type="text/javascript">
-                alert('{{message}}');
-            </script>
-            {% endfor %}
-            </ul>
-            {% endif %} -->
-            {% for m in missions %}
+            <form>
             <div id = "missionBox">
                 <div id = "missionmentoProfile">
                 </div>
-                <div id = "missionInfoBox">
+                <button id = "missionInfoBox">
                     <div id = "missionName">
-                        {{m.title}}
+                        친구랑 학식먹은거 인증하기
                     </div>
                     <div id = "missionContent">
-                        {{m.question}}
+                        친한 친구랑 학식먹고 인증하면 미션완료!
                         <div id ="mentoName">
-                            {{m.user_nickname}}
-                            <!-- <div>{{m.userPair}}</div> -->
+                            윤영준
                         </div>
-                        {% if m.mission_check %}
-                        미션완료!
-                        {% else %}
-                        <!-- <div id ="mission">
-                            <form method="POST" action="{% url 'mission:mission_list' %}">
-                            {% csrf_token %}
-                              <input type="text" name="answer" id="answer">
-                              <input type="hidden" name="mNumber" value="{{m.id}}">
-                              <br>
-                              <div id = "submitButtonBox">
-                                <button id = "submitButton" type="submit">제출하기</button>
-                              </div>
-                            </form>
-                        </div> -->
-                        {% endif %}
                     </div>
+                </button>
+                <div id = "missionCheckBox">
+                    미션 완료!
                 </div>
-            </div>   
-            {% endfor %}                    
+            </div>    
+            </form>                   
         </div>
     </div>
     <div id ="navigation" role="bar">
         <div id="IconBox">
-        <a herf ="mainPage.html"><div id= "homeIcon" class ="IconBox" onclick="location.href='#'"></div></a>
-        </div>
-        <div id="IconBox">
-        <a herf ="mentoPage.html"><div id= "mentoIcon" class ="IconBox" onclick="location.href='#'"></div></a>
-        </div>
-        <div id="IconBox">
-        <a herf ="questionPage.html"><div id= "questionIcon" class ="IconBox" onclick="location.href='#'"></div></a>
-        </div>
-        <div id="IconBox">
-        <a herf ="matchingPage.html"><div id= "matchingIcon" class ="IconBox" onclick="location.href='#'"></div></a>
+            <a herf ="mainPage.html"><div id= "homeIcon" class ="IconBox"></div></a>
+            </div>
+            <div id="IconBox">
+            <a herf ="mentoPage.html"><div id= "mentoIcon" class ="IconBox"></div></a>
+            </div>
+            <div id="IconBox">
+            <a herf ="questionPage.html"><div id= "questionIcon" class ="IconBox"></div></a>
+            </div>
+            <div id="IconBox">
+            <a herf ="matchingPage.html"><div id= "matchingIcon" class ="IconBox"></div></a>
+            </div>
         </div>
     </div>
       </div>

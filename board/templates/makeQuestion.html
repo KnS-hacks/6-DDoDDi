@@ -14,18 +14,20 @@
             navbar
         </div>
         <div id="container" role="main" >
-            <div id = "questionBox">
-                <div id = "questionTitle">
-                    <textarea id = "TitleBox" name= "TitleBox" row=5 style="resize: none;"></textarea>
+            <form>
+                <div id = "questionBox">
+                    <div id = "questionTitle">
+                        <textarea id = "TitleBox" name= "TitleBox" cols=57 style="resize: none;"></textarea>
+                    </div>
+                    <div id = "questionContent">
+                        <textarea id = "contentBox" name= "contentBox" cols = 57 rows=26 style="resize: none;"></textarea>
+                    </div>
+                    <div id = "line"></div>
+                    <div id = "buttonBox">
+                        <button id = "submitButton" type="submit" onclick="submitComment()">등록하기</button>
+                    </div>
                 </div>
-                <div id = "questionContent">
-                    <textarea id = "contentBox" name= "contentBox" row=5 style="resize: none;"></textarea>
-                </div>
-                <div id = "line"></div>
-                <div id = "buttonBox">
-                    <button id = "submitButton" type="submit" onclick="submitComment()">등록하기</button>
-                </div>
-            </div>                               
+            </form>                               
         </div>
         <div class="footer">
             <div id ="navigation" role="bar">
