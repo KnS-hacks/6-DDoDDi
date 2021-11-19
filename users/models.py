@@ -6,6 +6,7 @@ class User(models.Model):
     password = models.CharField(max_length=100, blank=True)
     mbti = models.CharField(max_length=100, blank=True)
     number = models.CharField(max_length=100, blank=True)
+    position = models.CharField(max_length=100, blank=True)
     matching_check = models.BooleanField(default=False)
     pair = models.CharField(max_length=100, blank=True)
     balance_game = models.BooleanField(default=False)
@@ -25,7 +26,7 @@ class Letterbox(models.Model):
 
 class Letter(models.Model):
     recipient = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
-    # sender = models.ForeignKey(User, on_delete=models.CASCADE, blank=True)
+    sender = models.CharField(max_length=200, blank=True)
     # letter_box = models.ForeignKey(Letterbox, on_delete=models.CASCADE, blank=True)
     title = models.CharField(max_length=200, blank=True)
     comment = models.TextField(max_length=1000, blank=True, null=True)

@@ -19,13 +19,13 @@
                 </div>
                 <div id="profileInfo" class = "profileSetting">
                     <div id="userName">
-                        김승환
+                        {{user.nickname}}
                     </div>
                     <div id="userSchool">
-                        한국기술교육대학교
+                        {{user.school}}
                     </div>
                     <div id = "userMbti">
-                        1998.09.08 ESTJ
+                        {{user.mbti}}
                     </div>
                 </div>
                 <a href="{% url 'users:letter-list' %}"> <div id = "messageStored" class = "profileSetting">
@@ -51,19 +51,26 @@
                     
                         <div id = "mentoprofileImage"></div>
                   
-                    
+                    {% if user.matching_check == False %}
+                    <form action="{% url 'users:matching' %}" method="post">
+                        {% csrf_token %}
+                        <button id="findMentoBtn">멘토 맺기</button>
+                    </form>
+                    {% endif %}
+                    {% if user.matching_check == True %}
                     <div id = "mentoprofileInfo" >
-                        
+
                         <div id = "userName">
-                            윤영준
+                            {{user.pair}}
                         </div>
                         <div id = "userSchool">
-                            한국기술교육대학교
+                            {{mentor.school}}
                         </div>
                         <div id = "userMbti">
-                            1998.09.08 ESTJ
+                            {{mentor.number}} {{mentor.mbti}}
                         </div>
                     </div>
+                    {% endif %}
                     <div id = "nextArrow"></div>
                 </div>
             </div>
