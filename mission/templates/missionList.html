@@ -13,8 +13,9 @@
             <div id="logo"></div>
         </div> 
         <div id="container" role="main" >
-            <form>
             {% for m in missions %}
+            <form method="post" action="{% url 'mission:mission_detail' m.id %}">
+                {% csrf_token %}
             <div id = "missionBox">
                 <div id = "missionmentoProfile">
                 </div>
@@ -35,8 +36,8 @@
                 </div>
                 {% endif %}
             </div> 
-            {% endfor %}   
-            </form>                   
+            </form> 
+            {% endfor %}                  
         </div>
     </div>
     <div id ="navigation" role="bar">

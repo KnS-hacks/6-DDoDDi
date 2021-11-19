@@ -1,4 +1,5 @@
 from django.shortcuts import render,redirect, get_object_or_404
+from mission.models import *
 from .models import Letter, User
 from .forms import LetterForm
 # Create your views here.
@@ -10,13 +11,20 @@ def home(request):
 def mypage(request):
     user = get_object_or_404(User, pk=2)
     mentor = get_object_or_404(User, pk=1)
-    return render(request, "mainPage.html", {'user':user, 'mentor': mentor})
+    missions = Mission.objects.filter(user_nickname=user)
+    return render(request, "mainPage.html", {'user':user, 'mentor': mentor, 'missions':missions})
 
 
 def letter_list(request):
     letters = Letter.objects.all().order_by('-created_at')
+    total = len(Letter.objects.all())
+    if letters:
+        total_num = total // 5
+        letters = Letter.objects.all()[0:total_num * 5]
+    user = User.objects.get(pk=2)
     context = {
         'letters': letters,
+        'user': user
     }
     return render(request, 'letterList.html', context)
 
@@ -30,6 +38,10 @@ def letter_create(request):
     form = LetterForm()
     return render(request,'letterCreate.html', {'form': form})
 
+
+def letter_detail(request, id):
+    letter = Letter.objects.get(pk = id)
+    return render(request, 'messageDetailPage.html', {'letter':letter})
 
 def letter_delete(request):
     passs
@@ -49,7 +61,11 @@ def matching(request):
 
         print("====",mentee.nickname, mentee.pair, mentee.matching_check)
         print("====",mentor.nickname, mentor.pair, mentor.matching_check)
-        return render(request, 'matching.html', {'mentee': mentee, 'mentor': mentor})
+        return render(request, 'mentoCard.html', {'mentee': mentee, 'mentor': mentor})
 
     return redirect('mypage')
 
+
+def mentor_detail(request):
+    mentor = get_object_or_404(User, pk=1)
+    return render(request, "mentocard.html", {'mentor': mentor})

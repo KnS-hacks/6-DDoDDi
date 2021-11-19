@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static '../../static/css/missionSubmit.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/missionSubmit.css' %}"/>
 
     <title>missionSubmit</title>
   <body>
@@ -14,12 +14,14 @@
             <div id="logo"></div>
         </div>
         <div id="container" role="main" >
-            <form>
+            <form method="post" action="{% url 'mission:submit_mission' mission.id %}">
+                {% csrf_token %}
                 <div id = "questionBox">
                     <div id = "questionTitle">
-                        <Button id= "SelectFileButton">파일</Button>
+                        <!-- <Button id= "SelectFileButton">파일</Button> -->
+                        <input type="file" id= "SelectFileButton" name="subFile"> 파일
                         <button id = "deleteButton">제출</button>
-                        <button id = "backButton">뒤로</button>
+                        <a href="{% url 'mission:mission_detail' mission.id %}"><button id = "backButton">뒤로</button></a>
                     </div>
                     <div id = "questionContent">
                         <textarea id = "contentBox" name= "contentBox" cols = 57 rows=26 style="resize: none;"></textarea>

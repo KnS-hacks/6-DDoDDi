@@ -1,12 +1,46 @@
+{% load static %}
+<link rel="stylesheet" href="{%static 'css/letterCreate.css' %}" />
 
-
-<h1>letter-create</h1>
-
-    <form enctype="multipart/form-data" action="{% url 'users:letter-create' %}" method="post">
-        {% csrf_token %}
-        <div>
-            {{ form.as_p }}
+<div class="background">
+        <div class="navbar">
+            navbar
         </div>
-        <button type="submit">편지 보내기</button>
-    </form>
-</div>
+        <div id="container" role="main" >
+            <form enctype="multipart/form-data" action="{% url 'users:letter-create' %}" method="post">
+                {% csrf_token %}
+                <div id = "questionBox">
+                            <div id = "questionTitle">
+                                <textarea id = "TitleBox" name= "title" cols=54 style="resize: none;"></textarea>
+                                <input type="hidden" name="recipient" value="1">
+                                <input type="hidden" name="sender" value="2">
+                            </div>
+                            <div id = "questionContent">
+                                <textarea id = "contentBox" name= "contentBox" cols = 57 rows=26 style="resize: none;"></textarea>
+                            </div>
+                            <div id = "line"></div>
+                            <div id = "buttonBox">
+                                <button id = "submitButton" type="submit" onclick="submitComment()">등록하기</button>
+                            </div>
+                </div>
+            </form>
+        </div>
+        <div class="footer">
+            <div id ="navigation" role="bar">
+                <div id="IconBox">
+                <a herf ="mainPage.html"><div id= "homeIcon" class ="IconBox"></div></a>
+                </div>
+                <div id="IconBox">
+                <a herf ="mentoPage.html"><div id= "mentoIcon" class ="IconBox"></div></a>
+                </div>
+                <div id="IconBox">
+                <a herf ="questionPage.html"><div id= "questionIcon" class ="IconBox"></div></a>
+                </div>
+                <div id="IconBox">
+                <a herf ="matchingPage.html"><div id= "matchingIcon" class ="IconBox"></div></a>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+

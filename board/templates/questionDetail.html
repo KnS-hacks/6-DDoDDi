@@ -30,8 +30,9 @@
             </div>
             {% endfor %}                   
         </div>
-        <form method="post" action="{% url 'board:question_detail' %}">
+        <form method="post" action="{% url 'board:make_comment' %}">
             {% csrf_token %}
+            <input type="hidden" name="bID" value="{{board.id}}">
         <div class ="comment-add">
             <textarea id = "new-comment" name="new-comment" row=15 placeholder="새 댓글" style="resize: none;"></textarea>
             <button id = "submitButton" type="submit" onclick="submitComment()">등록하기</button>
