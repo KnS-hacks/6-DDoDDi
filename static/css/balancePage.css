@@ -91,7 +91,7 @@ button {
 }
 
 .navbar {
-  border-radius:10px 10px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
   display: flex;
   flex-direction: row;
   background-color: var(--Brown-color);
@@ -99,7 +99,7 @@ button {
   padding: 26px 20px 16px;
 }
 
-#title {
+#pageName {
   color: #ffffff;
   margin-top: 17px;
   font-size: 17px;
