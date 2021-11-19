@@ -12,10 +12,11 @@
         <div class="navbar">
             <div id="logo"></div>
         </div>
-        <button id = "ButtonSetting">질문하기</Button>
-        <div id="container" role="main" >
-            {% for q in boards%}
-            <form>
+        <a href="{% url 'board:make_question' %}"><button id = "ButtonSetting">질문하기</Button></a>
+        <div id="container" role="main">
+            {% for q in boards %}
+            <form method="" action="{% url 'board:question_detail' q.id %}">
+                {% csrf_token %}
                 <Button id = "questionBox">
                     <div id = "questionTitle">
                         {{q.title}}
@@ -24,6 +25,7 @@
                         {{q.content}}
                     </div>
                 </Button>
+                <!-- <input type="hidden" name="bNum" value="{{q.id}}"> -->
             </form>
             {% endfor %}                         
         </div>

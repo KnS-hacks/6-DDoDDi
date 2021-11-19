@@ -15,8 +15,10 @@ def mypage(request):
 
 def letter_list(request):
     letters = Letter.objects.all().order_by('-created_at')
+    user = User.objects.get(pk=2)
     context = {
         'letters': letters,
+        'user': user
     }
     return render(request, 'letterList.html', context)
 
@@ -30,6 +32,10 @@ def letter_create(request):
     form = LetterForm()
     return render(request,'letterCreate.html', {'form': form})
 
+
+def letter_detail(request, id):
+    letter = Letter.objects.get(pk = id)
+    return render(request, 'messageDetailPage.html', {'letter':letter})
 
 def letter_delete(request):
     passs
