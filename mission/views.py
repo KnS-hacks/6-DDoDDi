@@ -8,7 +8,7 @@ from .forms import *
 def mList_view(request):
     user = User.objects.get(id=2)
     print(user)
-    missions = Mission.objects.filter(userPair=user)
+    missions = Mission.objects.filter(user_nickname=user)
     context = {
         'missions':missions
     }
@@ -34,7 +34,7 @@ def submit_mission(request, id):
         user1.save()
         user2.save()
         mission.save()
-        return redirect('mission:mission_list')
+        return redirect('users:letter-create')
     else:
         return render(request, 'missionSubmit.html', {'mission':mission})
         

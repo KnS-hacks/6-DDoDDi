@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static '../../static/css/balancePage.css' %}" />
+    <link rel="stylesheet" href="balancePage.css" />
+    <script src="balancePage.js"></script>
     <title>balancePage</title>
   </head>
   <body>
@@ -14,46 +15,14 @@
            <div id="logo"></div>
            <div id="pageName">밸런스게임</div>
         </div>
-        <div id="container" style="overflow:scroll;">
-            
-            
-            <div id = "balance">
-                <button id="leftItem"  onclick="location.href='balance.html' ">
-                    <span>짜장</span>
-                </button>
-                <button id = "rightItem" onclick="location.href='멘티니까 미션지항목으로' ">
-                    <span>짬뽕</span>
-                </button>
-            </div>
-            <div id = "balance">
-              <button id="leftItem"  onclick="location.href='balance.html' ">
-                  <span>민초</span>
-              </button>
-              <button id = "rightItem" onclick="location.href='멘티니까 미션지항목으로' ">
-                  <span>반민초</span>
-              </button>
-            </div>
-            <div id = "balance">
-              <button id="leftItem"  onclick="location.href='balance.html' ">
-                  <span>애인</span>
-              </button>
-              <button id = "rightItem" onclick="location.href='멘티니까 미션지항목으로' ">
-                  <span>친구</span>
-              </button>
-            </div>
-            <div id = "balance">
-              <button id="leftItem"  onclick="location.href='balance.html' ">
-                  <span>돈</span>
-              </button>
-              <button id = "rightItem" onclick="location.href='멘티니까 미션지항목으로' ">
-                  <span>명예</span>
-              </button>
-            </div>
-            <div id="submit">
-            <button id="submitBtn" onclick="">제출하기</button>
-            </div>
-        
-            </div>
+        <div id="container">
+          <p id="cal"></p>
+          <div id = "ImgBox">
+            <div id ="balanceImg" onclick="change(0)"></div>
+            <div id ="balanceImgs" onclick="change(1)"></div>
+            <div id = "buttonBox">
+              <button id = "submitButton" type="submit" onclick="" style="display: none;">제출하기</button>
+          </div>
           </div>
         </div>
         <div id ="navigation" role="bar">

@@ -51,6 +51,27 @@ button {
   background-color: transparent;
 }
 
+#balanceImg{
+  background-image: url("1.PNG");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 1px var(--Brown-lighter-color);
+  margin: 30px 30px 30px 100px;
+  width: 350px;
+  height: 250px;
+}
+
+#balanceImgs{
+  background-image: url("2.PNG");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 1px var(--Brown-lighter-color);
+  margin: 30px 30px 10px 100px;
+  width: 350px;
+  height: 250px;
+}
+
+
 .background {
   background-color: #ffeecb;
   max-width: 555px;
@@ -131,19 +152,14 @@ button {
   display: none; /* Chrome, Safari, Opera*/
 }
 
-#submit {
-  display: flex;
-  justify-content: center;
-}
-#submitBtn {
-  margin: 30px 0px 30px 0px;
-  width: 150px;
-  height: 50px;
-  color: #ffffff;
-  background-color: #a56a43;
-  font-weight: 900;
-  font-size: 20px;
-  border-radius: 30px;
+#submitButton{
+  border-radius: 10px;
+  background-color: var(--Brown-lighter-color);
+  border-color: var(--Brown-color);
+  border-width: 50%;
+  width:60px;
+  height: 25px;
+  margin-left: 230px;
 }
 
 #navigation {

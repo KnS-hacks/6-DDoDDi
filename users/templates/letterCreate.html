@@ -1,5 +1,5 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/missionSubmit.css' %}" />
+<link rel="stylesheet" href="{%static 'css/letterCreate.css' %}" />
 
 <div class="background">
         <div class="navbar">
@@ -9,17 +9,18 @@
             <form enctype="multipart/form-data" action="{% url 'users:letter-create' %}" method="post">
                 {% csrf_token %}
                 <div id = "questionBox">
-                    <div id = "questionTitle">
-                        <input type="text" name="title">
-                        <input type="hidden" name="recipient" value="1">
-                        <input type="hidden" name="sender" value="2">
-                        <button type="submit" id = "deleteButton">편지 보내기</button>
-                    </div>
-                    <div id = "questionContent">
-                        <input type="textarea" id = "contentBox" name= "comment" cols = 57 rows=26 style="resize: none;">
-                    </div>
-
-                    <div id = "line"></div>
+                            <div id = "questionTitle">
+                                <textarea id = "TitleBox" name= "title" cols=54 style="resize: none;"></textarea>
+                                <input type="hidden" name="recipient" value="1">
+                                <input type="hidden" name="sender" value="2">
+                            </div>
+                            <div id = "questionContent">
+                                <textarea id = "contentBox" name= "contentBox" cols = 57 rows=26 style="resize: none;"></textarea>
+                            </div>
+                            <div id = "line"></div>
+                            <div id = "buttonBox">
+                                <button id = "submitButton" type="submit" onclick="submitComment()">등록하기</button>
+                            </div>
                 </div>
             </form>
         </div>
@@ -42,5 +43,4 @@
       </div>
     </div>
   </body>
-
 

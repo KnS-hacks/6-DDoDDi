@@ -38,9 +38,19 @@
   box-sizing: border-box;
 }
 
+
 ul {
   list-style: none;
 }
+
+#messageBox{
+   display:flex;
+   margin:20px;
+   border: 0;
+   outline: 0;
+   background-color: transparent;
+
+  }
 
 body {
   display: flex;
