@@ -6,7 +6,6 @@ class User(models.Model):
     password = models.CharField(max_length=100, blank=True)
     mbti = models.CharField(max_length=100, blank=True)
     number = models.CharField(max_length=100, blank=True)
-    position = models.CharField(max_length=100, blank=True)
     matching_check = models.BooleanField(default=False)
     pair = models.CharField(max_length=100, blank=True)
     balance_game = models.BooleanField(default=False)
