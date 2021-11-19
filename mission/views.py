@@ -14,6 +14,30 @@ def mList_view(request):
     }
     return render(request, 'missionList.html', context)
 
+def mission_detail(request, id):
+    if request.method == 'POST':
+        mission = Mission.objects.get(id=id)
+        return render(request, 'missionDetail.html', {'mission':mission})
+
+def submit_mission(request, id):
+    mission = Mission.objects.get(id=id)
+    user1 = mission.user_nickname
+    user2 = User.objects.get(nickname=mission.userPair)
+    print(user1)
+    print(user2)
+
+    if request.method == 'POST':
+        mission.answer = request.POST.get('subFile')
+        mission.mission_check = True
+        user1.stamp += 1
+        user2.stamp += 1
+        user1.save()
+        user2.save()
+        mission.save()
+        return redirect('mission:mission_list')
+    else:
+        return render(request, 'missionSubmit.html', {'mission':mission})
+        
 
 # add_mission_view(): 멘토-미션 추가 뷰
 def add_mission_view(request):

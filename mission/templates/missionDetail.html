@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static '../../static/css/missionDetail.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/missionDetail.css' %}"/>
 
     <title>messageDetail</title>
   <body>
@@ -14,15 +14,16 @@
             navbar
         </div>
         <div id="container" role="main" >
-            <form>
+            <form method="get" action="{% url 'mission:submit_mission' mission.id %}">
+                {% csrf_token %}
                 <div id = "messageBox">
                     <div id = "messageTitle">
-                        <div id = "titleBox">(제목)</div>
+                        <div id = "titleBox">{{mission.title}}</div>
                         <button id = "deleteButton">제출</button>
-                        <button id = "backButton">뒤로</button>
+                        <a href="{% url 'mission:mission_list' %}"><button id = "backButton">뒤로</button></a>
                     </div>
                     <div id = "messageContent">
-                        <div id = "contentBox">(내용)</div>
+                        <div id = "contentBox">{{mission.question}}</div>
                     </div>
                     <div id = "line"></div>
                 </div>
