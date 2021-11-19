@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static '../../static/css/questionDetail.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/questionDetail.css' %}"/>
     <title>questionDetail</title>
   <body>
     <div class="background">
@@ -15,26 +15,28 @@
         <div id="container" role="main" >
             <div id = "questionBox">
                 <div id = "questionTitle">
-                    제목
+                    {{board.title}}
                 </div>
                 <div id = "questionContent">
-                    내용
+                    {{board.content}}
                 </div>
                 <div id = "line"></div>
             </div>
-            
-            <form>
+            {% for c in comments %}
             <div id = "comments">
                 <div id = "comment-head">
+                    {{c.content}}
                 </div>
             </div>
-            </form>  
-                             
+            {% endfor %}                   
         </div>
+        <form method="post" action="{% url 'board:question_detail' %}">
+            {% csrf_token %}
         <div class ="comment-add">
             <textarea id = "new-comment" name="new-comment" row=15 placeholder="새 댓글" style="resize: none;"></textarea>
             <button id = "submitButton" type="submit" onclick="submitComment()">등록하기</button>
         </div>
+        </form>
             <div id ="navigation" role="bar">
                 <div id="IconBox">
                 <a herf ="mainPage.html"><div id= "homeIcon" class ="IconBox"></div></a>
