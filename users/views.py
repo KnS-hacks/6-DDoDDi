@@ -59,7 +59,7 @@ def matching(request):
 
         print("====",mentee.nickname, mentee.pair, mentee.matching_check)
         print("====",mentor.nickname, mentor.pair, mentor.matching_check)
-        return render(request, 'matching.html', {'mentee': mentee, 'mentor': mentor})
+        return render(request, 'mentoCard.html', {'mentee': mentee, 'mentor': mentor})
 
     return redirect('mypage')
 
