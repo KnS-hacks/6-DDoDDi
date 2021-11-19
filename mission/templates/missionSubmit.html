@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static '../../static/css/missionSubmit.css' %}"/>
+
+    <title>missionSubmit</title>
+  <body>
+    <div class="background">
+        <div class="navbar">
+            navbar
+        </div>
+        <div id="container" role="main" >
+            <form>
+                <div id = "questionBox">
+                    <div id = "questionTitle">
+                        <Button id= "SelectFileButton">파일</Button>
+                        <button id = "deleteButton">제출</button>
+                        <button id = "backButton">뒤로</button>
+                    </div>
+                    <div id = "questionContent">
+                        <textarea id = "contentBox" name= "contentBox" cols = 57 rows=26 style="resize: none;"></textarea>
+                    </div>
+                    <div id = "line"></div>
+                </div>
+            </form>                               
+        </div>
+        <div class="footer">
+            <div id ="navigation" role="bar">
+                <div id="IconBox">
+                <a herf ="mainPage.html"><div id= "homeIcon" class ="IconBox"></div></a>
+                </div>
+                <div id="IconBox">
+                <a herf ="mentoPage.html"><div id= "mentoIcon" class ="IconBox"></div></a>
+                </div>
+                <div id="IconBox">
+                <a herf ="questionPage.html"><div id= "questionIcon" class ="IconBox"></div></a>
+                </div>
+                <div id="IconBox">
+                <a herf ="matchingPage.html"><div id= "matchingIcon" class ="IconBox"></div></a>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
