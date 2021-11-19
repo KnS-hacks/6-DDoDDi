@@ -34,7 +34,7 @@ def submit_mission(request, id):
         user1.save()
         user2.save()
         mission.save()
-        return redirect('mission:mission_list')
+        return redirect('users:letter-create')
     else:
         return render(request, 'missionSubmit.html', {'mission':mission})
         
