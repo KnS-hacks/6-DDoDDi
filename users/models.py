@@ -2,6 +2,7 @@ from django.db import models
 
 class User(models.Model):
     nickname = models.CharField(max_length=100, blank=True, unique=True)
+    profile = models.ImageField(blank=True, null=True, upload_to="blog/%Y/%m/%d")
     school = models.CharField(max_length=100, blank=True)
     password = models.CharField(max_length=100, blank=True)
     mbti = models.CharField(max_length=100, blank=True)

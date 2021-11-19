@@ -15,9 +15,17 @@
         </div>
         <div id="container" role="main">
             <div id= "profile">
+                {% if user.profile %}
+                <div class = "profileSetting">
+                    <img src="{{ user.profile.url }}" , alt="", style="width: 100px; height: 100px; border-radius: 50px">
+                </div>
+                {% endif %}
+                {% if not user.profile %}
                 <div id="profileImage" class = "profileSetting">
                 </div>
-                <div id="profileInfo" class = "profileSetting">
+                {% endif %}
+
+                <div id="profileInfo" class = "profileSetting" style="margin-left: 30px">
                     <div id="userName">
                         {{user.nickname}}
                     </div>
@@ -28,7 +36,7 @@
                         {{user.mbti}}
                     </div>
                 </div>
-                <a href="{% url 'users:letter-list' %}"> <div id = "messageStored" class = "profileSetting">
+                <a href="{% url 'users:letter-list' %}"> <div id = "messageStored" class = "profileSetting" style="margin-left: 120px;">
                     
                 </div></a>
             </div>
@@ -56,9 +64,13 @@
                     {% if user.matching_check == True %}
                     <div id = "멘토정보">멘토정보</div>
                     <div id="mentobox">
+                    {% if mentor.profile %}
+                        <img src="{{ mentor.profile.url }}" , alt="", style="width: 85px; height: 85px; border-radius: 50px">
+                    {% endif %}
+                    {% if not mentor.profile %}
                         <div id = "mentoprofileImage"></div>
-                    <div id = "mentoprofileInfo" >
-
+                        {% endif %}
+                    <div id = "mentoprofileInfo" style="margin-left: 20px">
                         <div id = "userName">
                             {{user.pair}}
                         </div>
