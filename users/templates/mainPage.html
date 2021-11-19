@@ -123,16 +123,16 @@
         </div>
             <div id ="navigation" role="bar">
                 <div id="IconBox">
-                <a herf ="mainPage.html"><div id= "homeIcon" class ="IconBox" onclick="location.href='#'"></div></a>
+                <a href ="mainPage.html"><div id= "homeIcon" class ="IconBox" onclick="location.href='#'"></div></a>
                 </div>
                 <div id="IconBox">
-                <a herf ="mentoPage.html"><div id= "mentoIcon" class ="IconBox" onclick="location.href='#'"></div></a>
+                <a href ="mentoPage.html"><div id= "mentoIcon" class ="IconBox" onclick="location.href='#'"></div></a>
                 </div>
                 <div id="IconBox">
-                <a herf ="questionPage.html"><div id= "questionIcon" class ="IconBox" onclick="location.href='#'"></div></a>
+                <a href ="{% url 'mission:mission_list' %}"><div id= "questionIcon" class ="IconBox"></div></a>
                 </div>
                 <div id="IconBox">
-                <a herf ="matchingPage.html"><div id= "matchingIcon" class ="IconBox" onclick="location.href='#'"></div></a>
+                <a href ="{% url 'board:question' %}"><div id= "matchingIcon" class ="IconBox"></div></a>
                 </div>
             </div>
         
