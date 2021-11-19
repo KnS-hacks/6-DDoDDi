@@ -29,7 +29,6 @@
 }
 
 * {
-  
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -40,14 +39,12 @@ ul {
 }
 
 body {
-  
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .background {
-
   border-radius: 5%;
   background-color: #ffeecb;
   max-width: 555px;
@@ -67,8 +64,7 @@ body {
 }
 
 .navbar {
-
-  border-radius:10px 10px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
   background-color: var(--Brown-color);
   height: 80px;
   padding: 26px 20px 16px;
@@ -312,4 +308,20 @@ body {
   background-size: 100%;
   width: 35px;
   height: 35px;
+}
+
+#findMentoBtn {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+  color: #ff8981;
+  width: 295px;
+  height: 108px;
+  background: #ffffff;
+  border: 5px solid #ff8981;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.16);
+  border-radius: 15px;
 }
