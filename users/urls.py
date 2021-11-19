@@ -10,5 +10,6 @@ urlpatterns = [
     path('letter/create', views.letter_create, name='letter-create'),
     path('matching/', views.matching, name='matching'),
     path('letter/detail/<int:id>', views.letter_detail, name='letter-detail'),
-    path('mentor/detail', views.mentor_detail, name='mentor-detail')
+    path('mentor/detail', views.mentor_detail, name='mentor-detail'),
+    path('balance/', views.balance, name='balance')
 ]

@@ -20,8 +20,8 @@
 
     function showImg(num){
         document.getElementById('submitButton').style.display='none';
-        document.getElementById('balanceImg').style.backgroundImage=`url("${num+1}.PNG")`;
-        document.getElementById('balanceImgs').style.backgroundImage=`url("${num+2}.PNG")`;
+        document.getElementById('balanceImg').style.backgroundImage=`url("../static/images/${num+1}.PNG")`;
+        document.getElementById('balanceImgs').style.backgroundImage=`url("../static/images/${num+2}.PNG")`;
         cnt2++;
     }
 

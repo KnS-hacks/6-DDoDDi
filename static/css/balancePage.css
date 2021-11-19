@@ -52,7 +52,7 @@ button {
 }
 
 #balanceImg{
-  background-image: url("1.PNG");
+  background-image: url("../images/1.PNG");
   background-size: 100%;
   background-repeat: no-repeat;
   border: 1px var(--Brown-lighter-color);
@@ -62,7 +62,7 @@ button {
 }
 
 #balanceImgs{
-  background-image: url("2.PNG");
+  background-image: url("../images/2.PNG");
   background-size: 100%;
   background-repeat: no-repeat;
   border: 1px var(--Brown-lighter-color);

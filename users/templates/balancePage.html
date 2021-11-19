@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="balancePage.css" />
-    <script src="balancePage.js"></script>
+    <link rel="stylesheet" href="{% static 'css/balancePage.css' %}" />
+    <script src="{% static 'js/balancePage.js' %}"></script>
     <title>balancePage</title>
   </head>
   <body>
@@ -21,7 +21,10 @@
             <div id ="balanceImg" onclick="change(0)"></div>
             <div id ="balanceImgs" onclick="change(1)"></div>
             <div id = "buttonBox">
-              <button id = "submitButton" type="submit" onclick="" style="display: none;">제출하기</button>
+              <form action="{% url 'users:mypage' %}" method="post">
+                {% csrf_token %}
+                <button id = "submitButton" type="submit" onclick="" style="display: none;">제출하기</button>
+              </form>
           </div>
           </div>
         </div>
