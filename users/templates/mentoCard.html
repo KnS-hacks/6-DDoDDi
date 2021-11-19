@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{% static '../../static/css/mentoCard.css' %}"
+    />
+    <title>messageDetail</title>
+  </head>
+  <body>
+    <div class="background">
+      <div class="navbar">
+        <div id="logo"></div>
+      </div>
+      <div id="cardContainer" role="main">
+        <div id="card">
+          <div id="backTab">
+            <button id="backBtn"></button>
+          </div>
+          <div id="mentoProfile">
+            <div id="frontNameTag">당신의 멘토는</div>
+            <img src="/images/test.jpeg" id="mentoprofileImage" /><img />
+            <div id="mentoName">김율희</div>
+            <div id="backNameTag">멘토</div>
+
+            <div id="mentoSchool">
+              <span>학교 :</span>
+              <span>순천향대학교</span>
+            </div>
+            <div id="mentoNum">
+              <span>학번 :</span>
+              <span>20171538</span>
+            </div>
+            <div id="mentoSchool">
+              <span>학과 :</span>
+              <span>사물인터넷학과</span>
+            </div>
+            <div id="mentoSchool">
+              <span>MBTI :</span>
+              <span>ISFP</span>
+            </div>
+          </div>
+        </div>
+        <div id="navigation" role="bar">
+          <div id="IconBox">
+            <a herf="mainPage.html"
+              ><div
+                id="homeIcon"
+                class="IconBox"
+                onclick="location.href='#'"
+              ></div
+            ></a>
+          </div>
+          <div id="IconBox">
+            <a herf="mentoPage.html"
+              ><div
+                id="mentoIcon"
+                class="IconBox"
+                onclick="location.href='#'"
+              ></div
+            ></a>
+          </div>
+          <div id="IconBox">
+            <a herf="questionPage.html"
+              ><div
+                id="questionIcon"
+                class="IconBox"
+                onclick="location.href='#'"
+              ></div
+            ></a>
+          </div>
+          <div id="IconBox">
+            <a herf="matchingPage.html"
+              ><div
+                id="matchingIcon"
+                class="IconBox"
+                onclick="location.href='#'"
+              ></div
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
