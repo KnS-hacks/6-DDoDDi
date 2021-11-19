@@ -15,6 +15,10 @@ def mypage(request):
 
 def letter_list(request):
     letters = Letter.objects.all().order_by('-created_at')
+    total = len(Letter.objects.all())
+    if letters:
+        total_num = total // 5
+        letters = Letter.objects.all()[0:total_num * 5]
     user = User.objects.get(pk=2)
     context = {
         'letters': letters,
@@ -59,3 +63,7 @@ def matching(request):
 
     return redirect('mypage')
 
+
+def mentor_detail(request):
+    mentor = get_object_or_404(User, pk=1)
+    return render(request, "mentocard.html", {'mentor': mentor})

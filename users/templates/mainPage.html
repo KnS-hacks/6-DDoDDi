@@ -54,7 +54,6 @@
                 </div>
             </div>
             <div id = "mentoInfo">
-                  
                     {% if user.matching_check == False %}
                     <form action="{% url 'users:matching' %}" method="post">
                         {% csrf_token %}
@@ -82,7 +81,7 @@
                         </div>
                     </div>
                     {% endif %}
-                    <div id = "nextArrow"></div>
+                        <a href="{% url 'users:mentor-detail' %}"><div id = "nextArrow"></div></a>
                 </div>
             </div>
             <div id = "mission" >
