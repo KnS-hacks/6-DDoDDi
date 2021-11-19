@@ -1,25 +1,25 @@
 :root {
-    /* Color */
-    --white-color: #ffffff;
-    --black-color: #000000;
-    --Brown-color: #a56a43;
-    --Brown-light-color: #df9e74;
-    --Brown-lighter-color: #fdd6ad;
-    --Brown-lightest-color: #ffe9d0;
-  
-    /* Size */
-  
-    --size-padding: 12px;
-    --avatar-size: 56px;
-  
-    /* Font Size */
-  
-    --font-large: 18px;
-    --font-medium: 14px;
-    --font-small: 12px;
-    --font-micro: 10px;
-  
-    /* 사용법 
+  /* Color */
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --Brown-color: #a56a43;
+  --Brown-light-color: #df9e74;
+  --Brown-lighter-color: #fdd6ad;
+  --Brown-lightest-color: #ffe9d0;
+
+  /* Size */
+
+  --size-padding: 12px;
+  --avatar-size: 56px;
+
+  /* Font Size */
+
+  --font-large: 18px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+
+  /* 사용법 
       
       ex) Color
   
@@ -30,129 +30,129 @@
       padding: var(--padding);
   
     */
-  }
-  
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  ul {
-    list-style: none;
-  }
-  
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .background {
-    border-radius: 5%;
-    background-color: #ffeecb;
-    max-width: 555px;
-    width: 100%;
-    height: 100vh;
-  }
-  
-  #container {
-      overflow-y: auto;
-      height: 72%;
-  }
-  
+}
 
-  .navbar {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-    border-radius:10px 10px 0px 0px;
-    background-color: var(--Brown-color);
-    height: 80px;
-    padding: 26px 20px 16px;
-  }
-  #messageBox{
-      display:flex;
-      margin:20px;
-  }
+ul {
+  list-style: none;
+}
 
-  #messageProfile{
-      display: flex;
-      padding: 30px;
-      background-image: url("../images/userProfileImage.png");
-      background-repeat: no-repeat;
-      background-size: 100%;
-  }
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  #messageInfoBox{
-      padding-left: 5px;
-      margin : 10px;
+.background {
+  border-radius: 5%;
+  background-color: #ffeecb;
+  max-width: 555px;
+  width: 100%;
+  height: 100vh;
+}
 
+#container {
+  overflow-y: auto;
+  height: 72%;
+}
 
-  }
+.navbar {
+  border-radius: 10px 10px 0px 0px;
+  background-color: var(--Brown-color);
+  height: 80px;
+  padding: 26px 20px 16px;
+}
 
-  #messageTitle{
-    font-weight: bold;
-    font-size: large;
-    display: flex;
+#logo {
+  width: 40px;
+  height: 40px;
+  background-image: url("../images/logo.png");
+}
 
- }
+#messageBox {
+  display: flex;
+  margin: 20px;
+}
 
-  #messageContent{
-      font-size:small;
-      font-weight: bold;
-      display: flex;
+#messageProfile {
+  display: flex;
+  padding: 30px;
+  background-image: url("../images/userProfileImage.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
 
-      
-  }
-  
-  #boxSetting {
-    width: 100%;
-  }
-  
-  #boxSetting2 {
-    width: 100%;
-  }
-  
-  #navigation {
-    border-radius: 0px 0px 10px 10px;
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    justify-content: space-around;
-    bottom: 0;
-    width: 555px;
-    height: 90px;
-    background-color: var(--Brown-color);
-  }
-  
-  #IconBox {
-    display: flex;
-    align-items: center;
-  }
-  #homeIcon {
-    background-image: url("../images/homeIcon.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 40px;
-    height: 40px;
-  }
-  #mentoIcon {
-    background-image: url("../images/mentoIcon.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 40px;
-    height: 40px;
-  }
-  #questionIcon {
-    background-image: url("../images/questionIcon.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 40px;
-    height: 40px;
-  }
-  #matchingIcon {
-    background-image: url("../images/matchingIcon.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 35px;
-    height: 35px;
-  }
+#messageInfoBox {
+  padding-left: 5px;
+  margin: 10px;
+}
+
+#messageTitle {
+  font-weight: bold;
+  font-size: large;
+  display: flex;
+}
+
+#messageContent {
+  font-size: small;
+  font-weight: bold;
+  display: flex;
+}
+
+#boxSetting {
+  width: 100%;
+}
+
+#boxSetting2 {
+  width: 100%;
+}
+
+#navigation {
+  border-radius: 0px 0px 10px 10px;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  justify-content: space-around;
+  bottom: 0;
+  width: 555px;
+  height: 90px;
+  background-color: var(--Brown-color);
+}
+
+#IconBox {
+  display: flex;
+  align-items: center;
+}
+#homeIcon {
+  background-image: url("../images/homeIcon.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 40px;
+  height: 40px;
+}
+#mentoIcon {
+  background-image: url("../images/mentoIcon.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 40px;
+  height: 40px;
+}
+#questionIcon {
+  background-image: url("../images/questionIcon.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 40px;
+  height: 40px;
+}
+#matchingIcon {
+  background-image: url("../images/matchingIcon.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 35px;
+  height: 35px;
+}
