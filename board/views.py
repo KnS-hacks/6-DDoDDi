@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from users.models import *
 from .forms import *
 
+
 # question_view(): 질문 게시판 목록 뷰
 def question_view(request):
     user = User.objects.first()
