@@ -6,13 +6,14 @@ from .forms import *
 def question_view(request):
     user = User.objects.first()
 
-    boards = Board.objects.filter(author=user)
+    boards = Board.objects.all()
     return render(request, 'questionPage.html', {'boards':boards})
 
 # question_detail_view(): 질문 게시판 상세 뷰
 def question_detail_view(request):
     user = User.objects.first()
-    board = Board.objects.get(author=user)
+    bNum = request.POST['bNum']
+    board = Board.objects.get(id=bNum)
 
     if request.method == 'POST':
         # form = CommentForm(request.POST, request.FILES)
@@ -31,7 +32,6 @@ def question_detail_view(request):
     else:
         form = CommentForm()
         comments = Comment.objects.filter(c_board=board)
-        print(comments)
         context = {
             'form':form,
             'board':board,
@@ -44,17 +44,21 @@ def make_question_view(request):
     user = User.objects.first()
 
     if request.method == 'POST':
-        form = BoardForm(request.POST, request.FILES)
-        if form.is_valid():
-            new_board = Board()
-            new_board.author = user
-            new_board.title = form.cleaned_data['title']
-            new_board.content = form.cleaned_data['content']
-            new_board.save()
-            return redirect('board:question_page')
+        # form = BoardForm(request.POST, request.FILES)
+        # if form.is_valid():
+        #     new_board = Board()
+        #     new_board.author = user
+        #     new_board.title = form.cleaned_data['title']
+        #     new_board.content = form.cleaned_data['content']
+        #     new_board.save()
+        new_board = Board()
+        new_board.author = user
+        new_board.title = request.POST['titleBox']
+        new_board.content = request.POST['contentBox']
+        new_board.save()
+        return redirect('board:question_page')
     else:
-        form = BoardForm()
-        return render(request, 'makeQuestion.html', {'form':form})
+        return render(request, 'makeQuestion.html')
 
 
 
