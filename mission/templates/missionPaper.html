@@ -40,20 +40,20 @@
             </div>
                                
         </div>
-            <div id ="navigation" role="bar">
-                <div id="IconBox">
-                <a herf ="mainPage.html"><div id= "homeIcon" class ="IconBox"></div></a>
-                </div>
-                <div id="IconBox">
-                <a herf ="mentoPage.html"><div id= "mentoIcon" class ="IconBox"></div></a>
-                </div>
-                <div id="IconBox">
-                <a herf ="questionPage.html"><div id= "questionIcon" class ="IconBox"></div></a>
-                </div>
-                <div id="IconBox">
-                <a herf ="matchingPage.html"><div id= "matchingIcon" class ="IconBox"></div></a>
-                </div>
-            </div>
+        <div id ="navigation" role="bar">
+          <div id="IconBox">
+          <a href ="{% url 'users:mypage' %}"><div id= "homeIcon" class ="IconBox"></div></a>
+          </div>
+          <div id="IconBox">
+          <a href ="{% url 'users:mentor-detail' %}"><div id= "mentoIcon" class ="IconBox" ></div></a>
+          </div>
+          <div id="IconBox">
+          <a href ="{% url 'mission:mission_list' %}"><div id= "questionIcon" class ="IconBox"></div></a>
+          </div>
+          <div id="IconBox">
+          <a href ="{% url 'board:question' %}"><div id= "matchingIcon" class ="IconBox"></div></a>
+          </div>
+      </div>
       </div>
     </div>
   </body>
