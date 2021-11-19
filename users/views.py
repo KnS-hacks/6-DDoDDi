@@ -59,3 +59,7 @@ def matching(request):
 
     return redirect('mypage')
 
+
+def mentor_detail(request):
+    mentor = get_object_or_404(User, pk=1)
+    return render(request, "mentocard.html", {'mentor': mentor})
