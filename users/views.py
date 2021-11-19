@@ -1,4 +1,5 @@
 from django.shortcuts import render,redirect, get_object_or_404
+from mission.models import *
 from .models import Letter, User
 from .forms import LetterForm
 # Create your views here.
@@ -10,7 +11,8 @@ def home(request):
 def mypage(request):
     user = get_object_or_404(User, pk=2)
     mentor = get_object_or_404(User, pk=1)
-    return render(request, "mainPage.html", {'user':user, 'mentor': mentor})
+    missions = Mission.objects.filter(user_nickname=user)
+    return render(request, "mainPage.html", {'user':user, 'mentor': mentor, 'missions':missions})
 
 
 def letter_list(request):
