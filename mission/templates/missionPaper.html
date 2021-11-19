@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'css/missionPaper.css' %}"/>
+    <link rel="stylesheet" href="missionPaper.css"/>
+    <script src="../templates/Comment.js" tpye="text/javascript"></script>
     <title>missionPaper</title>
   <body>
     <div class="background">
@@ -15,42 +16,44 @@
         <div id="container" role="main" >
             <div id = "missionBox">
                 <form method="post" action="{% url 'mission:add_mission' %}">
-                {% csrf_token %}
-                <div id="titleBox">
-                    <div id = "missionTitle">
-                   {{user}} 멘토가 {{pair}} 멘티에게 줄 이번 미션은?
+                    {% csrf_token %}
+                    <div id="titleBox">
+                        <div id = "missionTitle">
+                       {{user}} 멘토가 {{pair}} 멘티에게 줄 이번 미션은?
+                        </div>
+                        <div><button id="randomDice" type="reset"></button></div>
+    
                     </div>
-                    <div><button id="randomDice" type="reset"></button></div>
-
-                </div>
 
                 <div id = "missionContent">
-                    <div id ="mission">
-                      {{form.title}}
-                      {{form.question}}
-                      <!-- {{form.answer}} -->
+                    <div id = "questionTitle">
+                        <textarea id = "missionTitleBox" name= "TitleBox" cols=25 style="resize: none;"></textarea>
+                    </div>
+                    <div id = "questionContent">
+                        <textarea id = "missioncontentBox" name= "contentBox" cols=53 rows = 21 style="resize: none;"></textarea>
                     </div>
                 </div>
 
                 <div id = "submitButtonBox">
                     <button id = "submitButton" type="submit">등록하기</button>
                 </div>
-              </form>
             </div>
                                
         </div>
-        <div id ="navigation" role="bar">
-            <div id="IconBox">
-            <a herf ="mainPage.html"><div id= "homeIcon" class ="IconBox" onclick="location.href='#'"></div></a>
-            </div>
-            <div id="IconBox">
-            <a herf ="mentoPage.html"><div id= "mentoIcon" class ="IconBox" onclick="location.href='#'"></div></a>
-            </div>
-            <div id="IconBox">
-            <a herf ="questionPage.html"><div id= "questionIcon" class ="IconBox" onclick="location.href='#'"></div></a>
-            </div>
-            <div id="IconBox">
-            <a herf ="matchingPage.html"><div id= "matchingIcon" class ="IconBox" onclick="location.href='#'"></div></a>
+        <div class="footer">
+            <div id ="navigation" role="bar">
+                <div id="IconBox">
+                <a herf ="mainPage.html"><div id= "homeIcon" class ="IconBox"></div></a>
+                </div>
+                <div id="IconBox">
+                <a herf ="mentoPage.html"><div id= "mentoIcon" class ="IconBox"></div></a>
+                </div>
+                <div id="IconBox">
+                <a herf ="questionPage.html"><div id= "questionIcon" class ="IconBox"></div></a>
+                </div>
+                <div id="IconBox">
+                <a herf ="matchingPage.html"><div id= "matchingIcon" class ="IconBox"></div></a>
+                </div>
             </div>
         </div>
       </div>
