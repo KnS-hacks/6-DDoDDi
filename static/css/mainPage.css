@@ -255,6 +255,29 @@ body {
   color: white;
 }
 
+#balanceGo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: 30px;
+  border-radius: 20px;
+  width: 430px;
+  height: 70px;
+  background-color: #ffffff;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+  border: 5px solid #ff8981;
+}
+
+#balanceGoName {
+  color: #ff8981;
+  font-size: 23px;
+  font-weight: 700;
+}
+
 #missonName {
   font-size: 23px;
   font-weight: 700;

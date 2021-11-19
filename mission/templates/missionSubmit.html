@@ -19,7 +19,7 @@
                 <div id = "questionBox">
                     <div id = "questionTitle">
                         <!-- <Button id= "SelectFileButton">파일</Button> -->
-                        <input type="file" id= "SelectFileButton" name="subFile"> 파일
+                        <!-- <input type="file" id= "SelectFileButton" name="subFile"> 파일 -->
                         <button id = "deleteButton">제출</button>
                         <a href="{% url 'mission:mission_detail' mission.id %}"><button id = "backButton">뒤로</button></a>
                     </div>
@@ -28,7 +28,11 @@
                     </div>
                     <div id = "line"></div>
                 </div>
-            </form>                               
+                <div id="fileBox">
+                    <input type="file" name="subFile" id="file" class="inputfile" />
+                    <label for="file">미션 업로드</label></div> 
+            </form> 
+                             
         </div>
         <div class="footer">
             <div id ="navigation" role="bar">
