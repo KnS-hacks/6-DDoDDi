@@ -8,7 +8,7 @@ from .forms import *
 def mList_view(request):
     user = User.objects.get(id=2)
     print(user)
-    missions = Mission.objects.filter(userPair=user)
+    missions = Mission.objects.filter(user_nickname=user)
     context = {
         'missions':missions
     }
