@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="{% static '../../static/css/mentoCard.css' %}"
+      href="{% static 'css/mentoCard.css' %}"
     />
     <title>messageDetail</title>
   </head>
@@ -23,25 +23,22 @@
           </div>
           <div id="mentoProfile">
             <div id="frontNameTag">당신의 멘토는</div>
-            <img src="/images/test.jpeg" id="mentoprofileImage" /><img />
-            <div id="mentoName">김율희</div>
+            <img src="{{mentor.profile.url}}" id="mentoprofileImage" /><img />
+            <div id="mentoName">{{mentor.nickname}}</div>
             <div id="backNameTag">멘토</div>
 
             <div id="mentoSchool">
               <span>학교 :</span>
-              <span>순천향대학교</span>
+
+              <span>{{mentor.school}}</span>
             </div>
             <div id="mentoNum">
               <span>학번 :</span>
-              <span>20171538</span>
-            </div>
-            <div id="mentoSchool">
-              <span>학과 :</span>
-              <span>사물인터넷학과</span>
+              <span>{{mentor.number}}</span>
             </div>
             <div id="mentoSchool">
               <span>MBTI :</span>
-              <span>ISFP</span>
+              <span>{{mentor.mbti}}</span>
             </div>
           </div>
         </div>
@@ -56,8 +53,7 @@
             ></a>
           </div>
           <div id="IconBox">
-            <a herf="mentoPage.html"
-              ><div
+            <a herf="mentoPage.html"><div
                 id="mentoIcon"
                 class="IconBox"
                 onclick="location.href='#'"
