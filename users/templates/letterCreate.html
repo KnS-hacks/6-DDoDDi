@@ -1,5 +1,5 @@
 {% load static %}
-<link rel="stylesheet" href="{%static 'css/letterCreate.css' %}v" />
+<link rel="stylesheet" href="{%static 'css/letterCreate.css' %}" />
 
 <div class="background">
         <div class="navbar">
@@ -10,7 +10,7 @@
                 {% csrf_token %}
                 <div id = "questionBox">
                             <div id = "questionTitle">
-                                <textarea id = "TitleBox" name= "title" cols=57 style="resize: none;"></textarea>
+                                <textarea id = "TitleBox" name= "title" cols=54 style="resize: none;"></textarea>
                                 <input type="hidden" name="recipient" value="1">
                                 <input type="hidden" name="sender" value="2">
                             </div>
