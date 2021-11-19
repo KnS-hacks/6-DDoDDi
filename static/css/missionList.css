@@ -83,6 +83,7 @@
   }
 
   #missionInfoBox{
+      border: 1px var(--Brown-color);
       border-radius: 10px 10px 10px 10px;
       background-color: var(--Brown-color);
       padding: 10px 10px 5px 10px;
@@ -102,10 +103,19 @@
   }
 
   #mentoName{
+      margin-left: 10px;
+      margin-top:10px;
       font-weight: bold;
       font-size: x-small;
-      padding-left : 150px;
       text-align: right;
+  }
+
+  #missionCheckBox{
+    background-color: var(--Brown-light-color);
+    display:flex;
+    border-radius: 10px;
+    padding: 3px;
+    margin: 50px 5px 0px 5px;
   }
   
   #boxSetting {
