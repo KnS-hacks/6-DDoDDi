@@ -46,10 +46,6 @@
                 </div>
             </div>
             <div id = "mentoInfo">
-                <div id = "멘토정보">멘토정보</div>
-                <div id="mentobox">
-                    
-                        <div id = "mentoprofileImage"></div>
                   
                     {% if user.matching_check == False %}
                     <form action="{% url 'users:matching' %}" method="post">
@@ -58,6 +54,9 @@
                     </form>
                     {% endif %}
                     {% if user.matching_check == True %}
+                    <div id = "멘토정보">멘토정보</div>
+                    <div id="mentobox">
+                        <div id = "mentoprofileImage"></div>
                     <div id = "mentoprofileInfo" >
 
                         <div id = "userName">
