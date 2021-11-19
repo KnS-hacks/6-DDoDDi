@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static '../../static/css/missionList.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/missionList.css' %}" />
     <title>missionList</title>
   <body>
     <div class="background">
@@ -14,24 +14,28 @@
         </div> 
         <div id="container" role="main" >
             <form>
+            {% for m in missions %}
             <div id = "missionBox">
                 <div id = "missionmentoProfile">
                 </div>
                 <button id = "missionInfoBox">
                     <div id = "missionName">
-                        친구랑 학식먹은거 인증하기
+                        {{m.title}}
                     </div>
                     <div id = "missionContent">
-                        친한 친구랑 학식먹고 인증하면 미션완료!
+                        {{m.question}}
                         <div id ="mentoName">
-                            윤영준
+                            {{m.user_nickname}}
                         </div>
                     </div>
                 </button>
+                {% if m.mission_check %}
                 <div id = "missionCheckBox">
                     미션 완료!
                 </div>
-            </div>    
+                {% endif %}
+            </div> 
+            {% endfor %}   
             </form>                   
         </div>
     </div>

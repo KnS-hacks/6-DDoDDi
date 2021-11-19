@@ -121,7 +121,16 @@
   }
 
   #comments{
+    padding: 5px;
+    background-color: var(--Brown-light-color);
+    border-radius: 10px;
     margin:20px 20px 20px 20px;
+  }
+
+  #comment-head{
+    background-color: var(--white-color);
+    border-radius: 5px;
+    margin: 3px 5px 3px 5px;
   }
   .comment-date{
     font-size : xx-small;
@@ -130,6 +139,7 @@
     font-size: large;
   }
   #new-comment{
+    border-radius: 10px;
     width: 450px;
   }
 
@@ -149,14 +159,18 @@
   .comment-add{
     background-color: var(--Brown-lighter-color);
     padding :5px;
-    margin-top : 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    bottom: 10px;
     border-radius: 5px 5px 5px 5px;
     font-weight: bold;
     font-size: small;
-  }
+    margin-bottom: 50px;
+    margin-top: -10px;
+    }
   #submitButton{
+    margin-left: 15px;
+    border-color: var(--Brown-light-color);
+    background-color: var(--Brown-lighter-color);
+    border-radius: 5px;
   }
 
   
@@ -168,11 +182,6 @@
     width: 100%;
   }
   
-  .footer {
-    bottom: 0;
-    height: 90px;
-    background-color: var(--Brown-color);
-  }
   #navigation {
     border-radius: 0px 0px 10px 10px;
     display: flex;
