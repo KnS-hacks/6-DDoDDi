@@ -5,8 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="missionPaper.css"/>
-    <script src="../templates/Comment.js" tpye="text/javascript"></script>
+    <link rel="stylesheet" href="{% static 'css/missionPaper.css' %}"/>
     <title>missionPaper</title>
   <body>
     <div class="background">
@@ -37,10 +36,10 @@
                 <div id = "submitButtonBox">
                     <button id = "submitButton" type="submit">등록하기</button>
                 </div>
+                </form>
             </div>
                                
         </div>
-        <div class="footer">
             <div id ="navigation" role="bar">
                 <div id="IconBox">
                 <a herf ="mainPage.html"><div id= "homeIcon" class ="IconBox"></div></a>
@@ -55,7 +54,6 @@
                 <a herf ="matchingPage.html"><div id= "matchingIcon" class ="IconBox"></div></a>
                 </div>
             </div>
-        </div>
       </div>
     </div>
   </body>

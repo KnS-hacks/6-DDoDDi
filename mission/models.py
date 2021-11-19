@@ -15,7 +15,7 @@ class Mission(models.Model):
     userPair = models.CharField(max_length=100, blank=True)
     title = models.CharField(max_length=100, blank=True)
     question = models.TextField()
-    answer = models.CharField(max_length=100, blank=True)
+    answer = models.FileField(blank=True, upload_to="")
     mission_check = models.BooleanField(default=False)
 
     def __str__(self):
