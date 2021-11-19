@@ -150,7 +150,8 @@ body {
 #stampCount {
   font-weight: bold;
   font-size: 70px;
-  color: var(--Brown-light-color);
+  color: #FF8981;
+  margin-left: 10px;
 }
 
 #개 {
