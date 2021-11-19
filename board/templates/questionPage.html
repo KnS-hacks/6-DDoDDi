@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static '../../static/css/questionPage.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/questionPage.css' %}"/>
     <title>questionPage</title>
   <body>
     <div class="background">
@@ -14,7 +14,20 @@
         </div>
         <a herf=""><div id="ButtonSetting"><div id="questButton"></div></div></a>
         <div id="container" role="main" >
-            <div id = "questionBox">
+            {% for q in boards%}
+            <a href="{% url 'board:question_detail' %}">
+                <div id = "questionBox">
+                    <div id = "questionTitle">
+                        {{q.title}}
+                    </div>
+                    <div id = "questionContent">
+                        {{q.content}}
+                    </div>
+                    <div id = "line"></div>
+                </div>
+            </a>
+            {% endfor %}
+            <!-- <div id = "questionBox">
                 <div id = "questionTitle">
                     제목
                 </div>
@@ -49,7 +62,7 @@
                     내용
                 </div>
                 <div id = "line"></div>
-            </div>                           
+            </div>                            -->
         </div>
     </div>
     <div id ="navigation" role="bar">
